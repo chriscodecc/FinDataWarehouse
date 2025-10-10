@@ -1,0 +1,13 @@
+tables:
+  dim_company:
+    name: dim_company
+    columns: ["company_id", "name", "symbol", "country", "industry"]
+  dim_date:
+    name: dim_date
+    columns: ["date_id", "full_date", "day", "month", "year"]
+  fact_prices:
+    name: fact_prices
+    columns: ["price_id", "date_id", "company_id", "close_price", "high_price", "low_price", "open_price", "volume"]
+  stg_prices:
+    name: stg_prices
+    columns: ["load_timestamp", "asset", "full_date", "open_price", "high_price", "low_price", "close_price", "volume"]

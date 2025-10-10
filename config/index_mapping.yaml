@@ -1,0 +1,39 @@
+indices:
+  # Europa
+  DAX: ^GDAXI
+  EuroStoxx50: ^STOXX50E
+  FTSE100: ^FTSE
+  CAC40: ^FCHI
+  SMI: ^SSMI
+
+  # USA
+  S&P500: ^GSPC
+  NASDAQ100: ^NDX
+  NASDAQComposite: ^IXIC
+  DowJones: ^DJI
+  Russell2000: ^RUT
+
+  # Asien
+  Nikkei225: ^N225
+  HangSeng: ^HSI
+  ShanghaiComposite: 000001.SS
+  Kospi: ^KS11
+  Sensex: ^BSESN
+
+  # Weltweit
+  MSCIWorld: URTH   # ETF als Proxy für MSCI World
+
+  
+# Kryptowährungen
+  Bitcoin: BTC-USD
+  Ethereum: ETH-USD
+  Tether: USDT-USD
+  BinanceCoin: BNB-USD
+  XRP: XRP-USD
+  Cardano: ADA-USD
+  Solana: SOL-USD
+  Dogecoin: DOGE-USD
+  Polkadot: DOT-USD
+  Tron: TRX-USD
+  Polygon: MATIC-USD
+  Litecoin: LTC-USD
