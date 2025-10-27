@@ -1,4 +1,5 @@
 import logging
+from utils.paths import LOGS_DIR
 
 """
 Logging utility module.
@@ -31,8 +32,14 @@ def get_logger(name: str) -> logging.Logger:
         logger.setLevel(logging.DEBUG)
         handler = logging.StreamHandler()
         formatter = logging.Formatter ("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-
         handler.setFormatter( formatter)
         logger.addHandler(handler)
+
+        log_file = LOGS_DIR / "pipline.log"
+        f_handler = logging.FileHandler(log_file)
+        f_format = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+        f_handler.setFormatter(f_format)
+        logger.addHandler(f_handler)
+       
 
     return logger

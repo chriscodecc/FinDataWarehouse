@@ -1,7 +1,36 @@
 tickers:
-    - S&P 500 
-    - Dow Jones 
+    - Nikkei225
     - DAX
+    - Dow Jones
+    - SMI
+    - Russell2000
+    - CAC40
+    - EuroStoxx50
+    - FTSE100
+    - CAC40
+    - S&P500
+    - NASDAQ100
+    - NASDAQComposite
+    - Russell2000
+    - HangSeng
+    - ShanghaiComposite
+    - Kospi
+    - Sensex
+    - MSCIWorld
+    - Bitcoin
+    - Ethereum
+    - Tether
+    - BinanceCoin
+    - XRP
+    - Cardano
+    - Solana
+    - Dogecoin
+    - Polkadot
+    - Tron
+    - Polygon
+    - Litecoin
+
+    
   
-start_date: 2025-08-20
-end_date: 2025-10-09
+start_date: 2025-01-01
+end_date: 2025-10-20

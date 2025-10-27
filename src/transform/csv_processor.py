@@ -4,6 +4,8 @@ from utils.paths import DATA_DIR, CONFIG_DIR
 from utils.config import yaml_read
 from utils.db import PostgreSQLConnector
 import os
+from utils.helpers import normalize_symbol
+import pandas as pd
 
 class CSVProcessor():
     """
@@ -119,3 +121,58 @@ class CSVProcessor():
         df_new["volume"] = df_old["Volume"]
 
         return df_new
+    
+    def save_to_csv(self, data : DataFrame, ticker_name, startDate: str, endDate: str = ""):
+        """
+        Save a pandas DataFrame to a CSV file.
+
+        Args:
+            data (pd.DataFrame): The DataFrame containing financial data.
+            ticker_name (str): The ticker symbol of the asset.
+            startDate (str): Start date of the dataset in "YYYY-MM-DD" format.
+            endDate (str, optional): End date of the dataset in "YYYY-MM-DD" format. Defaults to "".
+
+        Notes:
+            - Flattens MultiIndex columns if present.
+            - Resets index to ensure "Date" is a column.
+            - Adds an "Asset" column with the normalized ticker symbol.
+            - Reorders columns so "Date" and "Asset" come first.
+            - Saves the DataFrame as a CSV in the configured DATA_DIR.
+        """
+        filename = self.csv_file_name_generator(ticker_name, startDate, endDate)
+        file_path = DATA_DIR / filename
+
+        if not data.empty:
+            # Resolve multi-index columns 
+            if isinstance(data.columns, pd.MultiIndex):
+                data.columns = data.columns.get_level_values(0)
+
+            data = data.reset_index()   #["Date"] = [startDate] * len(data)
+            data["Asset"] = normalize_symbol(self,ticker_name)
+
+            #Change column order -> set "Date" forward
+            cols = ["Date", "Asset"] + [col for col in data.columns if col not in ["Date", "Asset"]]
+            data = data[cols]
+    
+            data.to_csv(file_path, index=False)
+            self.logger.debug(file_path / " is safed as csv")
+
+
+    def csv_file_name_generator(self, symbole: str, startDate: str, endDate: str = ""):
+        """
+        Generate a standardized CSV filename for storing financial data.
+
+        Args:
+            symbole (str): The ticker symbol.
+            startDate (str): Start date in "YYYY-MM-DD" format.
+            endDate (str, optional): End date in "YYYY-MM-DD" format. Defaults to "".
+
+        Returns:
+            str: Filename in the format:
+                 - "<SYMBOL>_<STARTDATE>.csv" if endDate is empty.
+                 - "<SYMBOL>_<STARTDATE>_to_<ENDDATE>.csv" otherwise.
+        """
+        if endDate == "":
+            return symbole + "_" + startDate + ".csv"
+        else:
+            return symbole + "_" + startDate + "_to_" + endDate + ".csv"

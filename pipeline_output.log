@@ -1,0 +1,294 @@
+2025-10-24 17:24:20,779 - __main__ - INFO - Start ETL-Pipline for: 2025-10-23
+2025-10-24 17:24:20,788 - utils.db - DEBUG - C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-24 17:24:20,789 - __main__ - INFO - SCHRIT 1
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+
+1 Failed download:
+['MATIC-USD']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-10-23 -> 2025-10-24 00:00:00)')
+2025-10-24 17:24:25,537 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-24 17:24:25,537 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\extract\api_client.py:95: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  self.yfinance_data = yf.download(mapped_symbol, start=date, end= date_obj + timedelta(days=1), timeout=5)
+[*********************100%***********************]  1 of 1 completed
+Price              Close          High           Low          Open     Volume
+Ticker             ^N225         ^N225         ^N225         ^N225      ^N225
+Date                                                                         
+2025-10-23  48641.609375  48866.578125  48399.050781  48866.578125  107600000
+Price              Close          High           Low          Open    Volume
+Ticker            ^GDAXI        ^GDAXI        ^GDAXI        ^GDAXI    ^GDAXI
+Date                                                                        
+2025-10-23  24207.789062  24222.839844  24035.210938  24202.779297  51148200
+Price              Close          High           Low          Open     Volume
+Ticker              ^DJI          ^DJI          ^DJI          ^DJI       ^DJI
+Date                                                                         
+2025-10-23  46734.609375  46802.148438  46490.058594  46519.128906  407570000
+Price              Close         High           Low          Open    Volume
+Ticker             ^SSMI        ^SSMI         ^SSMI         ^SSMI     ^SSMI
+Date                                                                       
+2025-10-23  12557.269531  12612.44043  12546.969727  12583.089844  16053700
+Price             Close         High          Low         Open      Volume
+Ticker             ^RUT         ^RUT         ^RUT         ^RUT        ^RUT
+Date                                                                      
+2025-10-23  2482.659912  2488.350098  2457.330078  2457.330078  5565750000
+Price             Close         High          Low         Open    Volume
+Ticker            ^FCHI        ^FCHI        ^FCHI        ^FCHI     ^FCHI
+Date                                                                    
+2025-10-23  8225.780273  8257.469727  8215.530273  8225.450195  66578600
+Price             Close         High          Low         Open    Volume
+Ticker        ^STOXX50E    ^STOXX50E    ^STOXX50E    ^STOXX50E ^STOXX50E
+Date                                                                    
+2025-10-23  5668.330078  5673.109863  5639.819824  5651.899902  16245700
+Price             Close         High          Low    Open     Volume
+Ticker            ^FTSE        ^FTSE        ^FTSE   ^FTSE      ^FTSE
+Date                                                                
+2025-10-23  9578.599609  9594.799805  9505.700195  9515.0  814894500
+Price             Close         High          Low         Open    Volume
+Ticker            ^FCHI        ^FCHI        ^FCHI        ^FCHI     ^FCHI
+Date                                                                    
+2025-10-23  8225.780273  8257.469727  8215.530273  8225.450195  66578600
+Price             Close         High          Low         Open      Volume
+Ticker            ^GSPC        ^GSPC        ^GSPC        ^GSPC       ^GSPC
+Date                                                                      
+2025-10-23  6738.439941  6749.529785  6700.140137  6703.649902  5565750000
+Price              Close          High           Low          Open       Volume
+Ticker              ^NDX          ^NDX          ^NDX          ^NDX         ^NDX
+Date                                                                           
+2025-10-23  25097.410156  25126.779297  24856.339844  24869.599609  10363600000
+Price              Close          High           Low          Open       Volume
+Ticker             ^IXIC         ^IXIC         ^IXIC         ^IXIC        ^IXIC
+Date                                                                           
+2025-10-23  22941.800781  22983.460938  22732.179688  22751.330078  10363600000
+Price             Close         High          Low         Open      Volume
+Ticker             ^RUT         ^RUT         ^RUT         ^RUT        ^RUT
+Date                                                                      
+2025-10-23  2482.659912  2488.350098  2457.330078  2457.330078  5565750000
+Price              Close          High           Low          Open      Volume
+Ticker              ^HSI          ^HSI          ^HSI          ^HSI        ^HSI
+Date                                                                          
+2025-10-23  25967.980469  26080.839844  25591.660156  25718.529297  3104000000
+Price             Close         High          Low         Open    Volume
+Ticker        000001.SS    000001.SS    000001.SS    000001.SS 000001.SS
+Date                                                                    
+2025-10-23  3922.409912  3926.217041  3877.529053  3904.158936    565200
+Price             Close         High          Low         Open  Volume
+Ticker            ^KS11        ^KS11        ^KS11        ^KS11   ^KS11
+Date                                                                  
+2025-10-23  3845.560059  3902.209961  3822.330078  3835.790039  423600
+Price              Close        High       Low          Open Volume
+Ticker            ^BSESN      ^BSESN    ^BSESN        ^BSESN ^BSESN
+Date                                                               
+2025-10-23  84556.398438  85290.0625  84445.25  85154.148438  25700
+Price            Close        High         Low        Open  Volume
+Ticker            URTH        URTH        URTH        URTH    URTH
+Date                                                              
+2025-10-23  183.160004  183.380005  182.270004  182.300003  130600
+Price               Close          High  ...         Open       Volume
+Ticker            BTC-USD       BTC-USD  ...      BTC-USD      BTC-USD
+Date                                     ...                          
+2025-10-23  110069.726562  111288.59375  ...  107679.4375  54944076060
+
+[1 rows x 5 columns]
+Price             Close         High          Low         Open       Volume
+Ticker          ETH-USD      ETH-USD      ETH-USD      ETH-USD      ETH-USD
+Date                                                                       
+2025-10-23  3856.026367  3930.974854  3801.241455  3808.084961  36361652714
+Price         Close      High       Low      Open        Volume
+Ticker     USDT-USD  USDT-USD  USDT-USD  USDT-USD      USDT-USD
+Date                                                           
+2025-10-23  1.00052  1.001012  0.999246  1.000115  129632145103
+Price             Close         High          Low         Open      Volume
+Ticker          BNB-USD      BNB-USD      BNB-USD      BNB-USD     BNB-USD
+Date                                                                      
+2025-10-23  1127.572998  1150.999268  1071.939453  1072.050903  5661131703
+Price         Close      High       Low      Open      Volume
+Ticker      XRP-USD   XRP-USD   XRP-USD   XRP-USD     XRP-USD
+Date                                                         
+2025-10-23  2.39515  2.423271  2.363231  2.363862  3186334728
+Price          Close      High       Low      Open     Volume
+Ticker       ADA-USD   ADA-USD   ADA-USD   ADA-USD    ADA-USD
+Date                                                         
+2025-10-23  0.642845  0.652958  0.623254  0.623972  786265376
+Price            Close        High         Low        Open      Volume
+Ticker         SOL-USD     SOL-USD     SOL-USD     SOL-USD     SOL-USD
+Date                                                                  
+2025-10-23  191.388275  193.175568  179.800873  180.148132  6358339771
+Price          Close      High       Low      Open      Volume
+Ticker      DOGE-USD  DOGE-USD  DOGE-USD  DOGE-USD    DOGE-USD
+Date                                                          
+2025-10-23  0.194844  0.197216  0.189832  0.190002  1769172845
+Price          Close      High       Low      Open     Volume
+Ticker       DOT-USD   DOT-USD   DOT-USD   DOT-USD    DOT-USD
+Date                                                         
+2025-10-23  3.003082  3.034053  2.915545  2.921977  189733289
+Price          Close      High       Low      Open     Volume
+Ticker       TRX-USD   TRX-USD   TRX-USD   TRX-USD    TRX-USD
+Date                                                         
+2025-10-23  0.313899  0.323689  0.313285  0.322291  832368643
+Price           Close       High        Low       Open     Volume
+Ticker        LTC-USD    LTC-USD    LTC-USD    LTC-USD    LTC-USD
+Date                                                             
+2025-10-23  94.043701  94.735092  91.874115  91.920959  573637773C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:22: FutureWarning: DataFrame.groupby with axis=1 is deprecated. Do `frame.T.groupby(...)` without axis instead.
+  df_old = df_old.groupby(level=0, axis=1).first()
+2025-10-24 17:24:25,676 - __main__ - INFO - SCHRIT 2
+2025-10-24 17:24:25,784 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-10-24 17:24:25,787 - __main__ - INFO - SCHRIT 3
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\utils\db.py:284: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query,con)
+2025-10-24 17:24:30,987 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-10-24 17:24:30,988 - __main__ - INFO - SCHRIT 4
+2025-10-24 17:24:31,260 - __main__ - INFO - SCHRIT 4
+2025-10-24 17:24:31,261 - __main__ - INFO - SCHRIT 5
+2025-10-24 17:24:31,261 - __main__ - INFO - SCHRIT 6
+2025-10-24 17:24:31,283 - __main__ - INFO - SCHRIT 7
+C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\transform\stg_table_prozessor.py:53: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_facet_prices.dropna(subset=["company_id", "date_id"], inplace=True)
+2025-10-24 17:24:31,284 - __main__ - INFO - SCHRIT 8
+2025-10-24 17:24:31,346 - utils.db - DEBUG - Upsert succsesfull
+

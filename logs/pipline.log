@@ -1,0 +1,53 @@
+2025-10-24 14:17:05,307 - __main__ - INFO - Start ETL-Pipline for: 25-10-23
+2025-10-24 14:17:05,850 - __main__ - INFO - __file__: C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\main.py
+2025-10-24 14:17:08,453 - utils.db - DEBUG - C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-24 14:17:09,697 - __main__ - INFO - BASE DIR: C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse
+2025-10-24 14:17:10,489 - __main__ - INFO - CONFIG DIR: C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\config
+2025-10-24 17:13:57,526 - __main__ - INFO - Start ETL-Pipline for: 25-10-23
+2025-10-24 17:13:57,562 - utils.db - DEBUG - C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-24 17:13:57,563 - __main__ - INFO - symboles = ticker
+2025-10-24 17:13:57,563 - __main__ - INFO - start_date = str(ticker)
+2025-10-24 17:13:57,563 - __main__ - INFO - end_date = str(ticker)
+2025-10-24 17:13:57,563 - __main__ - INFO - SCHRIT 1
+2025-10-24 17:13:57,563 - __main__ - ERROR - ERROR: time data '25-10-23' does not match format '%Y-%m-%d'
+2025-10-24 17:17:07,733 - __main__ - INFO - Start ETL-Pipline for: 2025-10-23
+2025-10-24 17:17:07,741 - utils.db - DEBUG - C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-24 17:17:07,742 - __main__ - INFO - SCHRIT 1
+2025-10-24 17:17:18,679 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-24 17:17:18,683 - __main__ - ERROR - ERROR: 'NoneType' object has no attribute 'groupby'
+2025-10-24 17:24:20,779 - __main__ - INFO - Start ETL-Pipline for: 2025-10-23
+2025-10-24 17:24:20,788 - utils.db - DEBUG - C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-24 17:24:20,789 - __main__ - INFO - SCHRIT 1
+2025-10-24 17:24:25,537 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-24 17:24:25,537 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-10-24 17:24:25,676 - __main__ - INFO - SCHRIT 2
+2025-10-24 17:24:25,784 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-10-24 17:24:25,787 - __main__ - INFO - SCHRIT 3
+2025-10-24 17:24:30,987 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-10-24 17:24:30,988 - __main__ - INFO - SCHRIT 4
+2025-10-24 17:24:31,260 - __main__ - INFO - SCHRIT 4
+2025-10-24 17:24:31,261 - __main__ - INFO - SCHRIT 5
+2025-10-24 17:24:31,261 - __main__ - INFO - SCHRIT 6
+2025-10-24 17:24:31,283 - __main__ - INFO - SCHRIT 7
+2025-10-24 17:24:31,284 - __main__ - INFO - SCHRIT 8
+2025-10-24 17:24:31,346 - utils.db - DEBUG - Upsert succsesfull
+2025-10-24 17:27:08,640 - __main__ - INFO - Start ETL-Pipline for: 2025-10-23
+2025-10-24 17:27:08,646 - utils.db - DEBUG - C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-24 17:27:08,647 - __main__ - INFO - SCHRIT 1
+2025-10-24 17:27:14,045 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-24 17:27:14,045 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-10-24 17:27:14,207 - __main__ - INFO - SCHRIT 2
+2025-10-24 17:27:14,251 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-10-24 17:27:14,253 - __main__ - INFO - SCHRIT 3
+2025-10-24 17:27:19,546 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-10-24 17:27:19,547 - __main__ - INFO - SCHRIT 4
+2025-10-24 17:27:19,924 - __main__ - INFO - SCHRIT 4
+2025-10-24 17:27:19,924 - __main__ - INFO - SCHRIT 5
+2025-10-24 17:27:19,924 - __main__ - INFO - SCHRIT 6
+2025-10-24 17:27:19,938 - __main__ - INFO - SCHRIT 7
+2025-10-24 17:27:19,939 - __main__ - INFO - SCHRIT 8
+2025-10-24 17:27:19,983 - utils.db - DEBUG - Upsert succsesfull

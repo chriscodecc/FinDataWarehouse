@@ -1,0 +1,16 @@
+  File "C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\main.py", line 44
+    logger.info("symboles = ticker["tickers"]")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+  File "C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\main.py", line 44
+    logger.info("symboles = ticker["tickers"]")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+  File "C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\main.py", line 42
+    logger.info("symboles = ticker["tickers"]")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+  File "C:\Users\chris\Desktop\vs Code\Python\FinDataWarehouse\src\main.py", line 42
+    logger.info("symboles = ticker["tickers"]")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?

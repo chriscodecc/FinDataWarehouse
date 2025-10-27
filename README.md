@@ -73,3 +73,11 @@ jupyter notebook notebooks/
 
 
 "# FinDataWarehouse" 
+
+## How to git
+git add .
+git commit .m "Descreption" 
+
+git push
+
+git pull
