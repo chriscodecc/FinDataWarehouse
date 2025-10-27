@@ -104,15 +104,11 @@ class PostgreSQLConnector():
             - The table name is read dynamically from "schema.yaml".
             - Whitespace is removed from the symbol before comparison.
         """
-       
-
+    
         table_company = self.schema["tables"]["dim_company"]["name"]
-
-        
 
         # Fetch all rows from the query as a list of tuples, e.g. [('DAX',), ('SAP',), ...]
         rows = self.get_all_companie()
-        self.connection.close()
         # Check if the provided company code exists among the known symbols
         for id, symbole in rows:
             if comp_code == normalize_symbol(symbole):

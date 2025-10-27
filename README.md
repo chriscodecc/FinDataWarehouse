@@ -58,6 +58,8 @@ source .venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 pip install psycopg2
 pip install python-dotenv
+pip install pytest
+python -m pip install PyYAML
 
 4. Security 
 

@@ -1,8 +1,8 @@
 import re
-import yaml
 from utils.paths import BASE_DIR, CONFIG_DIR
+import yaml
 
-def normalize_symbol(self, symbole: str) -> str:
+def normalize_symbol(symbole: str) -> str:
         """
         Normalize a ticker symbol by removing whitespace.
 
