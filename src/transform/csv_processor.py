@@ -148,7 +148,7 @@ class CSVProcessor():
                 data.columns = data.columns.get_level_values(0)
 
             data = data.reset_index()   #["Date"] = [startDate] * len(data)
-            data["Asset"] = normalize_symbol(self,ticker_name)
+            data["Asset"] = normalize_symbol(ticker_name)
 
             #Change column order -> set "Date" forward
             cols = ["Date", "Asset"] + [col for col in data.columns if col not in ["Date", "Asset"]]

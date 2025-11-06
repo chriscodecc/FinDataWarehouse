@@ -122,6 +122,8 @@ class YahooFinanceClient:
         except requests.exceptions.RequestException as err:
             self.logger.error(f"Unexpected error: {err}")
 
+        return None
+
     def fetch_company_info(self, symbole: str):
         """
         Fetch company metadata for a given ticker symbol.
@@ -156,7 +158,7 @@ class YahooFinanceClient:
 
     
     def get_mapping_for_company(self, symbole:str):
-        symbole = normalize_symbol(self,symbole)
+        symbole = normalize_symbol(symbole)
         return self.index_mapping["indices"][symbole]
         
     

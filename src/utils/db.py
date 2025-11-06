@@ -37,10 +37,8 @@ class PostgreSQLConnector():
 
         self.logger = get_logger(__name__)
         self.connection = None
-        #data_dir = os.path.join(os.path.dirname(__file__), "..","..", "config.yaml")
         config_dir = CONFIG_DIR / "config.yaml"
         # Load environment variables from .env file (contains sensitive data)
-        #load_dotenv()
         dotenv_path = BASE_DIR / ".env"
         load_dotenv(dotenv_path)
 
@@ -245,10 +243,20 @@ class PostgreSQLConnector():
             "year" : dates.year
         })
         
-        engine = create_engine(f"postgresql+psycopg2://{self.user}:{self.password}@{self.host}:{self.port}/{self.dbname}")
-        df.to_sql("dim_date", engine, if_exists="append", index=False)
-
-        #["company_id", "name", "symbol", "country", "industry"]
+        #engine = create_engine(f"postgresql+psycopg2://{self.user}:{self.password}@{self.host}:{self.port}/{self.dbname}")
+        #df.to_sql("dim_date", engine, if_exists="append", index=False)
+        conn = self.get_connection()
+        cur = conn.cursor()
+        df['full_date'] = pd.to_datetime(df['full_date'], unit='ms').dt.date
+        records = df.to_records(index=False).tolist()
+        table_date = table_stg_prices = self.schema["tables"]["dim_date"]["name"]
+        
+        insert_query = f"""INSERT INTO {table_date} 
+                        (full_date, day, month, year) VALUES %s;"""
+        
+        execute_values(cur, insert_query, records)
+        self.logger.info("Date´s inserted succesfull.")
+        conn.commit()
 
     def insert_to_staging(self, df: pd.DataFrame):
 

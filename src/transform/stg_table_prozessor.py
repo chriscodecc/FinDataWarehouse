@@ -12,29 +12,30 @@ class StgProzessor():
         pass
 
     def normalize_df_for_stg_prices(self, df_old: pd.DataFrame, asset_ticker: str):
-        # Load and Create the table schema
-        schema = yaml_read("schema.yaml")
-        cols = [col for col in schema["tables"]["stg_prices"]["columns"]]
-        df_normalized = pd.DataFrame(columns=cols)
-    
+        if not df_old.empty:
+            # Load and Create the table schema
+            schema = yaml_read("schema.yaml")
+            cols = [col for col in schema["tables"]["stg_prices"]["columns"]]
+            df_normalized = pd.DataFrame(columns=cols)
 
-        # Merge duplicates and removes NaN values axis 0 = rows 
-        df_old = df_old.groupby(level=0, axis=1).first()
+            # Merge duplicates and removes NaN values axis 0 = rows 
+            df_old = df_old.T.groupby(level=0).first().T
 
-        # Removes empty columns axis 1 = columns 
-        # any / all
-        df_old = df_old.dropna(axis=1, how="all")
+            # Removes empty columns axis 1 = columns 
+            # any / all
+            df_old = df_old.dropna(axis=1, how="all")
 
-        # Fill the normalized DF
-        df_normalized["full_date"] = df_old["Date"]
-        df_normalized["open_price"] = df_old["Open"]
-        df_normalized["high_price"] = df_old["High"]
-        df_normalized["low_price"] = df_old["Low"]
-        df_normalized["close_price"] = df_old["Close"]
-        df_normalized["volume"] = df_old["Volume"]
-        df_normalized["asset"] = normalize_symbol(self,asset_ticker)
+            # Fill the normalized DF
+            df_normalized["full_date"] = df_old["Date"]
+            df_normalized["open_price"] = df_old["Open"]
+            df_normalized["high_price"] = df_old["High"]
+            df_normalized["low_price"] = df_old["Low"]
+            df_normalized["close_price"] = df_old["Close"]
+            df_normalized["volume"] = df_old["Volume"]
+            df_normalized["asset"] = normalize_symbol(asset_ticker)
 
-        return df_normalized
+            return df_normalized
+        return None
 
     def stg_normalize_for_fact_prices(self, enriched_df: pd.DataFrame):
         df_facet_prices =  enriched_df[[
@@ -76,6 +77,7 @@ class StgProzessor():
         on="full_date",
         how="left"
         )
+        print(enriched_df)
         return enriched_df
         
    

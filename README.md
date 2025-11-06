@@ -49,17 +49,13 @@ cd FinDataWarehouse
 
 2. Create a virtual environment:
 
-python3 -m venv .venv
+python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 .venv\Scripts\activate     # Windows
 
 3. Install dependencies:
 
 pip install -r requirements.txt
-pip install psycopg2
-pip install python-dotenv
-pip install pytest
-python -m pip install PyYAML
 
 4. Security 
 

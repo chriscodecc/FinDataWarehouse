@@ -51,3 +51,135 @@
 2025-10-24 17:27:19,938 - __main__ - INFO - SCHRIT 7
 2025-10-24 17:27:19,939 - __main__ - INFO - SCHRIT 8
 2025-10-24 17:27:19,983 - utils.db - DEBUG - Upsert succsesfull
+2025-10-28 10:42:00,082 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 10:42:42,993 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 10:43:35,691 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 10:46:37,949 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:36:12,335 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:38:16,593 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:43:11,929 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:43:24,658 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:44:57,330 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:48:00,994 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:48:45,069 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 11:52:26,388 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:04:00,516 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:05:01,711 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:06:43,775 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:13:59,005 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:16:49,216 - db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:16:49,489 - db - INFO - Date´s inserted succesfull.
+2025-10-28 12:24:29,678 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:24:29,686 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:24:29,688 - __main__ - ERROR - ERROR: normalize_symbol() takes 1 positional argument but 2 were given
+2025-10-28 12:27:18,108 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:27:18,116 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:27:18,119 - __main__ - ERROR - ERROR: normalize_symbol() takes 1 positional argument but 2 were given
+2025-10-28 12:35:31,483 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:35:31,490 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:35:31,492 - __main__ - ERROR - ERROR: normalize_symbol() takes 1 positional argument but 2 were given
+2025-10-28 12:36:18,999 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:36:19,006 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:36:19,008 - __main__ - ERROR - ERROR: normalize_symbol() takes 1 positional argument but 2 were given
+2025-10-28 12:37:18,589 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:37:18,596 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:37:31,751 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-28 12:37:31,751 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-10-28 12:37:32,258 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-10-28 12:37:32,416 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-10-28 12:37:32,615 - extract.api_client - INFO - Versuch 1/10 für BinanceCoin (API-Symbol: BinanceCoin)
+2025-10-28 12:37:33,841 - __main__ - ERROR - ERROR: FEHLER:  keine Berechtigung für Sequenz dim_company_company_id_seq
+
+2025-10-28 12:39:20,239 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:39:20,245 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:39:27,965 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-28 12:39:27,966 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-10-28 12:39:28,284 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-10-28 12:39:28,410 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-10-28 12:39:28,607 - extract.api_client - INFO - Versuch 1/10 für Ethereum (API-Symbol: Ethereum)
+2025-10-28 12:39:29,914 - extract.api_client - INFO - Versuch 1/10 für BinanceCoin (API-Symbol: BinanceCoin)
+2025-10-28 12:39:30,783 - extract.api_client - INFO - Versuch 1/10 für Bitcoin (API-Symbol: Bitcoin)
+2025-10-28 12:39:31,895 - extract.api_client - INFO - Versuch 1/10 für CAC40 (API-Symbol: CAC40)
+2025-10-28 12:39:32,844 - extract.api_client - INFO - Versuch 1/10 für Solana (API-Symbol: Solana)
+2025-10-28 12:39:33,754 - extract.api_client - INFO - Versuch 1/10 für Sensex (API-Symbol: Sensex)
+2025-10-28 12:39:34,815 - extract.api_client - INFO - Versuch 1/10 für NASDAQComposite (API-Symbol: NASDAQComposite)
+2025-10-28 12:39:35,976 - extract.api_client - INFO - Versuch 1/10 für Dogecoin (API-Symbol: Dogecoin)
+2025-10-28 12:39:36,973 - extract.api_client - INFO - Versuch 1/10 für Nikkei225 (API-Symbol: Nikkei225)
+2025-10-28 12:39:37,944 - extract.api_client - INFO - Versuch 1/10 für ShanghaiComposite (API-Symbol: ShanghaiComposite)
+2025-10-28 12:39:38,855 - extract.api_client - INFO - Versuch 1/10 für NASDAQ100 (API-Symbol: NASDAQ100)
+2025-10-28 12:39:39,755 - extract.api_client - INFO - Versuch 1/10 für Litecoin (API-Symbol: Litecoin)
+2025-10-28 12:39:40,617 - extract.api_client - INFO - Versuch 1/10 für S&P500 (API-Symbol: S&P500)
+2025-10-28 12:39:41,524 - extract.api_client - INFO - Versuch 1/10 für Polkadot (API-Symbol: Polkadot)
+2025-10-28 12:39:42,541 - extract.api_client - INFO - Versuch 1/10 für Cardano (API-Symbol: Cardano)
+2025-10-28 12:39:43,463 - extract.api_client - INFO - Versuch 1/10 für Tron (API-Symbol: Tron)
+2025-10-28 12:39:43,996 - extract.api_client - INFO - Versuch 1/10 für Kospi (API-Symbol: Kospi)
+2025-10-28 12:39:44,897 - extract.api_client - INFO - Versuch 1/10 für EuroStoxx50 (API-Symbol: EuroStoxx50)
+2025-10-28 12:39:45,793 - extract.api_client - INFO - Versuch 1/10 für FTSE100 (API-Symbol: FTSE100)
+2025-10-28 12:39:47,148 - extract.api_client - INFO - Versuch 1/10 für XRP (API-Symbol: XRP)
+2025-10-28 12:39:47,759 - extract.api_client - INFO - Versuch 1/10 für DowJones (API-Symbol: DowJones)
+2025-10-28 12:39:48,909 - extract.api_client - INFO - Versuch 1/10 für Russell2000 (API-Symbol: Russell2000)
+2025-10-28 12:39:50,055 - extract.api_client - INFO - Versuch 1/10 für DAX (API-Symbol: DAX)
+2025-10-28 12:39:50,737 - extract.api_client - INFO - Versuch 1/10 für MSCIWorld (API-Symbol: MSCIWorld)
+2025-10-28 12:39:51,665 - extract.api_client - INFO - Versuch 1/10 für Tether (API-Symbol: Tether)
+2025-10-28 12:39:52,785 - extract.api_client - INFO - Versuch 1/10 für HangSeng (API-Symbol: HangSeng)
+2025-10-28 12:39:53,723 - extract.api_client - INFO - Versuch 1/10 für SMI (API-Symbol: SMI)
+2025-10-28 12:39:54,648 - __main__ - ERROR - ERROR: FEHLER:  keine Berechtigung für Sequenz fact_prices_price_id_seq
+
+2025-10-28 12:42:28,122 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:42:28,128 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:42:38,222 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-28 12:42:38,222 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-10-28 12:42:38,529 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-10-28 12:42:38,656 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-10-28 12:42:38,931 - utils.db - DEBUG - Upsert succsesfull
+2025-10-28 12:53:35,445 - __main__ - INFO - Start ETL-Pipline for: 2025-10-27
+2025-10-28 12:53:35,455 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-28 12:53:44,004 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-10-28 12:53:44,005 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-10-28 12:53:44,355 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-10-28 12:53:44,487 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-10-28 12:53:44,753 - utils.db - DEBUG - Upsert succsesfull
+2025-10-30 17:43:11,149 - __main__ - INFO - Start ETL-Pipline for: 2025-10-29
+2025-10-30 17:43:11,159 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-30 17:44:12,316 - __main__ - INFO - Start ETL-Pipline for: 2025-10-29
+2025-10-30 17:44:12,325 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-30 17:44:59,569 - __main__ - INFO - Start ETL-Pipline for: 2025-10-29
+2025-10-30 17:44:59,578 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-30 18:02:54,320 - __main__ - INFO - Start ETL-Pipline for: 2025-10-29
+2025-10-30 18:02:54,329 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-10-30 19:06:29,436 - __main__ - INFO - Start ETL-Pipline for: 2025-10-29
+2025-10-30 19:06:29,446 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-01 14:48:48,730 - __main__ - INFO - Start ETL-Pipline for: 2025-10-31
+2025-11-01 14:48:48,740 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-01 14:49:29,067 - __main__ - INFO - Start ETL-Pipline for: 2025-10-31
+2025-11-01 14:49:29,077 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-01 14:50:10,701 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-01 14:50:10,702 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-01 14:50:10,904 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-01 14:50:10,988 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-11-01 15:26:46,865 - __main__ - INFO - Start ETL-Pipline for: 2025-10-31
+2025-11-01 15:26:46,874 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-01 15:26:51,166 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-01 15:26:51,166 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-01 15:26:51,349 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-01 15:26:51,425 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-11-01 16:36:05,050 - __main__ - INFO - Start ETL-Pipline for: 2025-10-31
+2025-11-01 16:36:05,060 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-01 16:36:09,318 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-01 16:36:09,318 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-01 16:36:09,505 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-01 16:36:09,597 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
