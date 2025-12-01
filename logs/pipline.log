@@ -183,3 +183,647 @@
                         (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
                         VALUES %s ; succesfull
 2025-11-01 16:36:09,597 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-11-06 20:51:21,815 - __main__ - INFO - Start ETL-Pipline for: 2025-11-05
+2025-11-06 20:51:21,822 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-06 20:51:22,642 - extract.api_client - ERROR - Nikkei225 yFinace data are empty 
+2025-11-06 20:51:22,643 - __main__ - WARNING - WARNING: Couldn´t download data for Nikkei225
+2025-11-06 20:51:22,867 - extract.api_client - ERROR - DAX yFinace data are empty 
+2025-11-06 20:51:22,867 - __main__ - WARNING - WARNING: Couldn´t download data for DAX
+2025-11-06 20:51:23,109 - extract.api_client - ERROR - Dow Jones yFinace data are empty 
+2025-11-06 20:51:23,109 - __main__ - WARNING - WARNING: Couldn´t download data for Dow Jones
+2025-11-06 20:51:23,391 - extract.api_client - ERROR - SMI yFinace data are empty 
+2025-11-06 20:51:23,391 - __main__ - WARNING - WARNING: Couldn´t download data for SMI
+2025-11-06 20:51:23,558 - extract.api_client - ERROR - Russell2000 yFinace data are empty 
+2025-11-06 20:51:23,559 - __main__ - WARNING - WARNING: Couldn´t download data for Russell2000
+2025-11-06 20:51:23,687 - extract.api_client - ERROR - CAC40 yFinace data are empty 
+2025-11-06 20:51:23,688 - __main__ - WARNING - WARNING: Couldn´t download data for CAC40
+2025-11-06 20:51:23,818 - extract.api_client - ERROR - EuroStoxx50 yFinace data are empty 
+2025-11-06 20:51:23,818 - __main__ - WARNING - WARNING: Couldn´t download data for EuroStoxx50
+2025-11-06 20:51:24,407 - extract.api_client - ERROR - FTSE100 yFinace data are empty 
+2025-11-06 20:51:24,408 - __main__ - WARNING - WARNING: Couldn´t download data for FTSE100
+2025-11-06 20:51:24,421 - extract.api_client - ERROR - CAC40 yFinace data are empty 
+2025-11-06 20:51:24,421 - __main__ - WARNING - WARNING: Couldn´t download data for CAC40
+2025-11-06 20:51:24,624 - extract.api_client - ERROR - S&P500 yFinace data are empty 
+2025-11-06 20:51:24,624 - __main__ - WARNING - WARNING: Couldn´t download data for S&P500
+2025-11-06 20:51:24,732 - extract.api_client - ERROR - NASDAQ100 yFinace data are empty 
+2025-11-06 20:51:24,732 - __main__ - WARNING - WARNING: Couldn´t download data for NASDAQ100
+2025-11-06 20:51:24,848 - extract.api_client - ERROR - NASDAQComposite yFinace data are empty 
+2025-11-06 20:51:24,848 - __main__ - WARNING - WARNING: Couldn´t download data for NASDAQComposite
+2025-11-06 20:51:24,862 - extract.api_client - ERROR - Russell2000 yFinace data are empty 
+2025-11-06 20:51:24,862 - __main__ - WARNING - WARNING: Couldn´t download data for Russell2000
+2025-11-06 20:51:25,000 - extract.api_client - ERROR - HangSeng yFinace data are empty 
+2025-11-06 20:51:25,000 - __main__ - WARNING - WARNING: Couldn´t download data for HangSeng
+2025-11-06 20:51:25,128 - extract.api_client - ERROR - ShanghaiComposite yFinace data are empty 
+2025-11-06 20:51:25,128 - __main__ - WARNING - WARNING: Couldn´t download data for ShanghaiComposite
+2025-11-06 20:51:25,245 - extract.api_client - ERROR - Kospi yFinace data are empty 
+2025-11-06 20:51:25,245 - __main__ - WARNING - WARNING: Couldn´t download data for Kospi
+2025-11-06 20:51:25,393 - extract.api_client - ERROR - Sensex yFinace data are empty 
+2025-11-06 20:51:25,393 - __main__ - WARNING - WARNING: Couldn´t download data for Sensex
+2025-11-06 20:51:25,644 - extract.api_client - ERROR - MSCIWorld yFinace data are empty 
+2025-11-06 20:51:25,644 - __main__ - WARNING - WARNING: Couldn´t download data for MSCIWorld
+2025-11-06 20:51:25,916 - extract.api_client - ERROR - Bitcoin yFinace data are empty 
+2025-11-06 20:51:25,917 - __main__ - WARNING - WARNING: Couldn´t download data for Bitcoin
+2025-11-06 20:51:26,101 - extract.api_client - ERROR - Ethereum yFinace data are empty 
+2025-11-06 20:51:26,102 - __main__ - WARNING - WARNING: Couldn´t download data for Ethereum
+2025-11-06 20:51:26,274 - extract.api_client - ERROR - Tether yFinace data are empty 
+2025-11-06 20:51:26,274 - __main__ - WARNING - WARNING: Couldn´t download data for Tether
+2025-11-06 20:51:26,418 - extract.api_client - ERROR - BinanceCoin yFinace data are empty 
+2025-11-06 20:51:26,418 - __main__ - WARNING - WARNING: Couldn´t download data for BinanceCoin
+2025-11-06 20:51:26,603 - extract.api_client - ERROR - XRP yFinace data are empty 
+2025-11-06 20:51:26,604 - __main__ - WARNING - WARNING: Couldn´t download data for XRP
+2025-11-06 20:51:26,730 - extract.api_client - ERROR - Cardano yFinace data are empty 
+2025-11-06 20:51:26,730 - __main__ - WARNING - WARNING: Couldn´t download data for Cardano
+2025-11-06 20:51:26,869 - extract.api_client - ERROR - Solana yFinace data are empty 
+2025-11-06 20:51:26,869 - __main__ - WARNING - WARNING: Couldn´t download data for Solana
+2025-11-06 20:51:26,987 - extract.api_client - ERROR - Dogecoin yFinace data are empty 
+2025-11-06 20:51:26,988 - __main__ - WARNING - WARNING: Couldn´t download data for Dogecoin
+2025-11-06 20:51:27,166 - extract.api_client - ERROR - Polkadot yFinace data are empty 
+2025-11-06 20:51:27,166 - __main__ - WARNING - WARNING: Couldn´t download data for Polkadot
+2025-11-06 20:51:27,326 - extract.api_client - ERROR - Tron yFinace data are empty 
+2025-11-06 20:51:27,327 - __main__ - WARNING - WARNING: Couldn´t download data for Tron
+2025-11-06 20:51:27,435 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-06 20:51:27,435 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-06 20:51:28,198 - extract.api_client - ERROR - Litecoin yFinace data are empty 
+2025-11-06 20:51:28,198 - __main__ - WARNING - WARNING: Couldn´t download data for Litecoin
+2025-11-06 20:51:28,199 - __main__ - ERROR - ERROR: No objects to concatenate
+2025-11-19 17:12:58,165 - __main__ - INFO - Start ETL-Pipline for: 2025-11-18
+2025-11-19 17:12:58,170 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-19 17:13:02,592 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-19 17:13:02,592 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-19 17:13:02,872 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-19 17:13:02,956 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-11-19 17:13:03,190 - utils.db - DEBUG - Upsert succsesfull
+2025-11-19 17:18:24,391 - __main__ - INFO - Start ETL-Pipline for: 2025-11-18
+2025-11-19 17:18:24,396 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-19 17:18:28,855 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-19 17:18:28,855 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-19 17:18:29,044 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-19 17:18:29,124 - utils.db - ERROR - A random Ork appears. You can't finish the TRUNCATE!
+2025-11-19 17:18:29,333 - utils.db - DEBUG - Upsert succsesfull
+2025-11-19 17:30:23,592 - __main__ - INFO - Start ETL-Pipline for: 2025-11-18
+2025-11-19 17:30:23,598 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-19 17:30:30,080 - extract.api_client - ERROR - EuroStoxx50 yFinace data are empty 
+2025-11-19 17:30:30,080 - __main__ - WARNING - WARNING: Couldn´t download data for EuroStoxx50
+2025-11-19 17:30:36,049 - extract.api_client - ERROR - Kospi yFinace data are empty 
+2025-11-19 17:30:36,050 - __main__ - WARNING - WARNING: Couldn´t download data for Kospi
+2025-11-19 17:30:41,683 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-19 17:30:41,683 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-19 17:30:41,885 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-19 17:30:41,930 - __main__ - ERROR - ERROR: 'table'
+2025-11-19 17:33:11,169 - __main__ - INFO - Start ETL-Pipline for: 2025-11-18
+2025-11-19 17:33:11,174 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-19 17:33:16,213 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-19 17:33:16,214 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-19 17:33:16,396 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-19 17:33:16,472 - utils.db - ERROR - Critical error during truncation of stg_prices
+2025-11-19 17:33:16,679 - utils.db - DEBUG - Upsert succsesfull
+2025-11-19 17:33:17,780 - __main__ - INFO - Start ETL-Pipline for: 2025-11-18
+2025-11-19 17:33:17,785 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-19 17:33:22,434 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-19 17:33:22,434 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-19 17:33:22,646 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-19 17:33:22,723 - utils.db - ERROR - Critical error during truncation of stg_prices
+2025-11-19 17:33:22,935 - utils.db - DEBUG - Upsert succsesfull
+2025-11-21 09:42:06,620 - __main__ - INFO - Start ETL-Pipline for: 2025-11-20
+2025-11-21 09:42:06,661 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-21 09:42:18,074 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-21 09:42:18,074 - __main__ - WARNING - WARNING: Couldn´t download data for Polygon
+2025-11-21 09:42:18,573 - utils.db - DEBUG -  INSERT INTO stg_prices
+                        (asset, full_date, open_price, high_price, low_price,close_price, volume ) 
+                        VALUES %s ; succesfull
+2025-11-21 09:42:18,805 - utils.db - ERROR - Critical error during truncation of stg_prices
+2025-11-21 09:42:18,922 - __main__ - ERROR - ERROR: connection already closed
+2025-11-21 09:45:04,652 - __main__ - INFO - Start ETL-Pipline for: 2025-11-20
+2025-11-21 09:45:04,659 - utils.db - DEBUG - C:\Development\Projects\FinDataWarehouse\config\config.yaml\ is loaded
+2025-11-21 09:45:04,661 - __main__ - ERROR - ERROR: 'start_date'
+2025-11-25 18:01:18,816 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-24 ===
+2025-11-25 18:01:18,828 - __main__ - ERROR - Critical Pipeline Error: 'use_start_end_Date'
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 60, in main
+    if ticker_config["period"]["use_start_end_Date"]:
+       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'use_start_end_Date'
+2025-11-25 18:02:46,209 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-24 ===
+2025-11-25 18:02:47,353 - extract.api_client - ERROR - Nikkei225 yFinace data are empty 
+2025-11-25 18:02:47,354 - __main__ - WARNING - Skipping Nikkei225: No data found.
+2025-11-25 18:02:47,538 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:47,649 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:47,772 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:47,936 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,046 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,203 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,326 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,343 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,492 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,608 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,717 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,733 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,866 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:48,976 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:49,085 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:49,203 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:49,396 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:49,570 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:49,711 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:49,837 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:49,956 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:50,089 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:50,264 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:50,397 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:50,580 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:50,773 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:50,918 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:51,017 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-25 18:02:51,018 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-25 18:02:51,137 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-25 18:02:51,204 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-25 18:02:51,238 - __main__ - ERROR - Critical Pipeline Error: function takes at most 2 arguments (3 given)
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 83, in main
+    db_con.insert_to_staging(stg_normalized_df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 195, in insert_to_staging
+    cur.execute(cur, insert_query, records)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: function takes at most 2 arguments (3 given)
+2025-11-26 18:09:50,919 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 18:09:51,595 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:51,722 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:51,856 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:51,987 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,109 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,241 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,374 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,510 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,528 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,661 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,800 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,924 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:52,942 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:53,100 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:53,240 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:53,361 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:53,520 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:53,682 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:53,803 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:53,981 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:54,141 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:54,294 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:54,431 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:54,584 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:54,740 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:54,864 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:55,002 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:55,191 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:55,343 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 18:09:55,343 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 18:09:55,472 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 18:09:55,557 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 18:09:55,592 - __main__ - ERROR - Critical Pipeline Error: function takes at most 2 arguments (3 given)
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 83, in main
+    db_con.insert_to_staging(stg_normalized_df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 195, in insert_to_staging
+    cur.execute(cur, insert_query, records)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: function takes at most 2 arguments (3 given)
+2025-11-26 19:01:49,622 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:01:50,114 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:50,267 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:50,422 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:50,566 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:50,720 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:50,851 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:50,991 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,110 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,126 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,261 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,411 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,540 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,557 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,689 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,831 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:51,961 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:52,082 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:52,222 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:52,359 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:52,492 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:52,668 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:52,810 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:52,982 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:53,115 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:53,307 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:53,470 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:53,622 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:53,752 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:53,881 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:01:53,881 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:01:54,015 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:01:54,059 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:01:54,092 - __main__ - ERROR - Critical Pipeline Error: not all arguments converted during string formatting
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 83, in main
+    db_con.insert_to_staging(stg_normalized_df)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 195, in insert_to_staging
+    cur.execute(insert_query, records)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: not all arguments converted during string formatting
+2025-11-26 19:03:43,574 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:03:44,273 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:44,405 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:44,594 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:44,726 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:44,850 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:44,969 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,088 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,218 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,234 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,365 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,511 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,650 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,667 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:45,845 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:46,016 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:46,127 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:46,254 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:46,449 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:46,583 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:46,718 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:46,903 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,029 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,144 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,263 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,372 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,507 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,635 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,755 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:47,897 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:03:47,898 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:03:48,019 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:03:48,065 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:03:48,106 - utils.db - DEBUG - Inserted 29 rows into staging.
+2025-11-26 19:03:48,106 - __main__ - ERROR - Critical Pipeline Error: 'PostgreSQLConnector' object has no attribute 'get_connectionU'
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 87, in main
+    stg_df = db_con.get_stg_prices()
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 204, in get_stg_prices
+    with self.get_connectionU() as conn:
+         ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PostgreSQLConnector' object has no attribute 'get_connectionU'. Did you mean: 'get_connection'?
+2025-11-26 19:05:44,792 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:05:45,480 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:45,604 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:45,725 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:45,848 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:45,984 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,124 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,297 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,466 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,482 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,607 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,738 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,882 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:46,900 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,022 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,152 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,294 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,429 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,559 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,669 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,807 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:47,999 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:48,109 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:48,264 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:48,409 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:48,542 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:48,688 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:48,807 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:48,926 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:49,068 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:05:49,068 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:05:49,189 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:05:49,236 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:05:49,273 - utils.db - DEBUG - Inserted 29 rows into staging.
+2025-11-26 19:05:49,305 - __main__ - ERROR - Critical Pipeline Error: Query must be a string unless using sqlalchemy.
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 87, in main
+    stg_df = db_con.get_stg_prices()
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 205, in get_stg_prices
+    df = pd.read_sql_query(query,conn)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 528, in read_sql_query
+    return pandas_sql.read_query(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        sql,
+        ^^^^
+    ...<6 lines>...
+        dtype_backend=dtype_backend,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2728, in read_query
+    cursor = self.execute(sql, params)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2660, in execute
+    raise TypeError("Query must be a string unless using sqlalchemy.")
+TypeError: Query must be a string unless using sqlalchemy.
+2025-11-26 19:08:07,907 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:08:08,579 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:08,753 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:08,928 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,037 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,209 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,340 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,470 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,597 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,614 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,724 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,869 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:09,997 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,013 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,123 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,243 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,367 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,524 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,654 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,791 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:10,901 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,027 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,147 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,257 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,383 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,528 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,637 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,770 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:11,912 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:12,126 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:08:12,127 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:08:12,277 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:08:12,323 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:08:12,364 - utils.db - DEBUG - Inserted 29 rows into staging.
+2025-11-26 19:08:12,402 - __main__ - ERROR - Critical Pipeline Error: Execution failed on sql 'Composed([SQL('SELECT * FROM '), Identifier('stg_prices'), SQL(';')])': FEHLER:  Syntaxfehler bei »Composed«
+LINE 1: Composed([SQL('SELECT * FROM '), Identifier('stg_prices'), S...
+        ^
+Traceback (most recent call last):
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2664, in execute
+    cur.execute(sql, *args)
+    ~~~~~~~~~~~^^^^^^^^^^^^
+psycopg2.errors.SyntaxError: FEHLER:  Syntaxfehler bei »Composed«
+LINE 1: Composed([SQL('SELECT * FROM '), Identifier('stg_prices'), S...
+        ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 87, in main
+    stg_df = db_con.get_stg_prices()
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 205, in get_stg_prices
+    df = pd.read_sql_query(str(query), conn)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 528, in read_sql_query
+    return pandas_sql.read_query(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        sql,
+        ^^^^
+    ...<6 lines>...
+        dtype_backend=dtype_backend,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2728, in read_query
+    cursor = self.execute(sql, params)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2676, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql 'Composed([SQL('SELECT * FROM '), Identifier('stg_prices'), SQL(';')])': FEHLER:  Syntaxfehler bei »Composed«
+LINE 1: Composed([SQL('SELECT * FROM '), Identifier('stg_prices'), S...
+        ^
+
+2025-11-26 19:19:33,936 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:19:34,450 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:34,654 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:34,805 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,001 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,143 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,287 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,434 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,575 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,592 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,799 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:35,947 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:36,094 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:36,122 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:36,320 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:36,471 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:36,605 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:36,746 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:36,925 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:37,056 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:37,219 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:37,394 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:37,534 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:37,729 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:37,863 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:38,003 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:38,133 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:38,274 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:38,448 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:38,578 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:19:38,579 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:19:38,720 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:19:38,767 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:19:38,809 - utils.db - DEBUG - Inserted 29 rows into staging.
+2025-11-26 19:19:38,846 - __main__ - ERROR - Critical Pipeline Error: Query must be a string unless using sqlalchemy.
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 87, in main
+    stg_df = db_con.get_stg_prices()
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 205, in get_stg_prices
+    df = pd.read_sql_query(query, conn)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 528, in read_sql_query
+    return pandas_sql.read_query(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        sql,
+        ^^^^
+    ...<6 lines>...
+        dtype_backend=dtype_backend,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2728, in read_query
+    cursor = self.execute(sql, params)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2660, in execute
+    raise TypeError("Query must be a string unless using sqlalchemy.")
+TypeError: Query must be a string unless using sqlalchemy.
+2025-11-26 19:20:50,525 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:20:51,087 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:51,319 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:51,555 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:51,713 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:51,880 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,023 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,202 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,361 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,381 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,527 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,684 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,820 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:52,840 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:53,020 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:53,246 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:53,386 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:53,601 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:53,812 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:53,959 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:54,123 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:54,278 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:54,432 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:54,563 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:54,717 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:54,871 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:55,066 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:55,229 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:55,430 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:55,645 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:20:55,646 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:20:55,818 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:20:55,876 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:20:55,925 - utils.db - DEBUG - Inserted 29 rows into staging.
+2025-11-26 19:22:06,345 - __main__ - ERROR - Critical Pipeline Error: Query must be a string unless using sqlalchemy.
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 87, in main
+    stg_df = db_con.get_stg_prices()
+  File "C:\Development\Projects\FinDataWarehouse\src\utils\db.py", line 205, in get_stg_prices
+    df = pd.read_sql_query(query, conn)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 528, in read_sql_query
+    return pandas_sql.read_query(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        sql,
+        ^^^^
+    ...<6 lines>...
+        dtype_backend=dtype_backend,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2728, in read_query
+    cursor = self.execute(sql, params)
+  File "c:\Development\Projects\FinDataWarehouse\.venv\Lib\site-packages\pandas\io\sql.py", line 2660, in execute
+    raise TypeError("Query must be a string unless using sqlalchemy.")
+TypeError: Query must be a string unless using sqlalchemy.
+2025-11-26 19:26:30,860 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:26:31,545 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:31,720 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:31,863 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,009 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,119 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,250 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,380 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,575 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,592 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,736 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,855 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:32,989 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:33,006 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:33,152 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:33,312 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:33,429 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:33,612 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:33,742 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:33,875 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:34,008 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:34,139 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:34,346 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:34,495 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:34,618 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:34,807 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:34,948 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:35,236 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:35,359 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:35,478 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:26:35,479 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:26:35,619 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:26:35,664 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:26:35,702 - utils.db - DEBUG - Inserted 29 rows into staging.
+2025-11-26 19:26:35,905 - utils.db - DEBUG - Upsert succsesfull: 135 rows processed.
+2025-11-26 19:26:35,905 - __main__ - INFO - === Pipeline finished successfully ===
+2025-11-26 19:40:05,509 - __main__ - INFO - === Start ETL-Pipline for: 2025-11-25 ===
+2025-11-26 19:40:06,508 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:06,742 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:06,935 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:07,435 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:07,743 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:07,992 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:08,234 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:08,449 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:08,478 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:08,692 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:08,873 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:09,095 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:09,126 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:09,330 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:09,524 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:09,793 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:10,007 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:10,284 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:10,517 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:10,797 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:11,083 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:11,340 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:11,631 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:11,912 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:12,383 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:12,601 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:12,816 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:13,113 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:13,403 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2025-11-26 19:40:13,404 - __main__ - WARNING - Skipping Polygon: No data found.
+2025-11-26 19:40:13,701 - transform.stg_processor - WARNING - Index flatting warning: 'method' object is not subscriptable
+2025-11-26 19:40:13,745 - utils.db - ERROR - Error truncating stg_prices: FEHLER:  keine Berechtigung für Tabelle stg_prices
+
+2025-11-26 19:40:13,782 - utils.db - DEBUG - Inserted 29 rows into staging.
+2025-11-26 19:40:13,970 - utils.db - DEBUG - Upsert succsesfull: 135 rows processed.
+2025-11-26 19:40:13,970 - __main__ - INFO - === Pipeline finished successfully ===

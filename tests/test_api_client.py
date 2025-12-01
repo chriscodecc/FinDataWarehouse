@@ -22,7 +22,7 @@ def test_extract_meta():
     assert result_dic["industry"] == "Index" 
     assert result_dic["symbol"] == "DAX" 
 
-def test_extract_meta_fallback():
+def test_extract_meta_fallback_to_shortName():
     api_client = YahooFinanceClient()
     symbole = "DAX"
     info_dic = {
@@ -37,7 +37,7 @@ def test_extract_meta_fallback():
     result_dic = api_client.extract_meta(info_dic, symbole)
     assert result_dic["name"] == "DAX"
 
-def test_extract_meta_ticker_fallback():
+def test_extract_meta_ticker_fallback_to_symbol():
     api_client = YahooFinanceClient()
     symbole = "DAX"
     info_dic = {
@@ -50,6 +50,18 @@ def test_extract_meta_ticker_fallback():
 
     result_dic = api_client.extract_meta(info_dic, symbole)
     assert result_dic["name"] == symbole
+
+def test_extract_meta_ticker_fallback_to_symbol():
+    api_client = YahooFinanceClient()
+    symbole = "DAX"
+    info_dic = {
+        "industry" : "Index",
+        "sector" : "Financial services",
+        "quoteType" : "Price Index"
+    }
+
+    result_dic = api_client.extract_meta(info_dic, symbole)
+    assert result_dic["country"] == "Global"
 
 def test_fetch_finace_data_is_None(mocker):
     api_client = YahooFinanceClient()

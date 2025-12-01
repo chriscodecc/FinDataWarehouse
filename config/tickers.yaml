@@ -30,7 +30,8 @@ tickers:
     - Polygon
     - Litecoin
 
-    
-  
+period:
+    use_start_end_date: false
+
 start_date: 2025-01-01
 end_date: 2025-10-20

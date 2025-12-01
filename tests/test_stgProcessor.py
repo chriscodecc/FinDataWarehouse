@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
 from utils.helpers import yaml_read
-from transform.stg_table_prozessor import StgProzessor
+from transform.stg_processor import StgProcessor
 
 
 def test_normalize_df_for_stg_prices():
-    stgProz = StgProzessor()
+    stgProz = StgProcessor()
 
     columns = pd.MultiIndex.from_tuples([
         ('Price', 'Date'),
@@ -42,7 +42,7 @@ def test_normalize_df_for_stg_prices():
     assert stgProz.normalize_df_for_stg_prices(df_raw, "^N225") is None
 
 def test_get_enriched_df():
-    stgProzessor = StgProzessor()
+    stgProzessor = StgProcessor()
     dim_date = pd.DataFrame({
         "date_id" : [55],
         "full_date" : ["2025-10-27"],
@@ -96,7 +96,7 @@ def test_get_enriched_df():
 
 
 def test_stg_normalize_for_fact_prices():
-    stgProzessor = StgProzessor()
+    stgProzessor = StgProcessor()
     
     enriched_df = pd.DataFrame({
         "load_timestamp" : ["2025-11-01 11:37:32.224135 +00:00"],
