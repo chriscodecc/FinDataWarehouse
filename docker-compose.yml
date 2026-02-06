@@ -3,6 +3,7 @@ services:
     build: .
     tty: true #Hält den Container offen
     stdin_open: true # Erlaubt eingaben
+    command: tail -f /dev/null
     environment: 
       - PYTHONUNBUFFERED=1
       - DB_HOST=database                # MÖGLICHER FEHLER???
@@ -14,6 +15,8 @@ services:
     depends_on:
       database:
         condition: service_healthy
+    ports:
+      - "8000:8000"
     
   database:
     image: postgres:15

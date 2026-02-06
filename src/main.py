@@ -51,7 +51,7 @@ def main():
    stg_processor = StgProcessor()
    db_con = PostSQLCon()
 
-   if not db_con.get_all_dates():
+   if not db_con.get_all_dates() or len(db_con.get_all_dates()) <= 0:
       logger.debug("dim_date is empty. \n Start filling...")
       db_con.create_dim_date()
 

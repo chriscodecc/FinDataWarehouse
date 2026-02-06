@@ -5,3 +5,4 @@ sqlalchemy==2.0.44
 psycopg2-binary==2.9.11
 python-dotenv==1.2.1
 pyyaml==6.0.3
+fastapi[standard]

@@ -1390,3 +1390,62 @@ psycopg2.errors.InvalidColumnReference: there is no unique or exclusion constrai
 2026-02-06 15:40:07,396 - utils.db - INFO - Inserted new company: HangSeng
 2026-02-06 15:40:07,448 - utils.db - INFO - DONE! 29 Datasets saved in fact_prices.
 2026-02-06 15:40:07,449 - __main__ - INFO - === Pipeline finished successfully ===
+2026-02-06 16:15:07,170 - __main__ - INFO - === Start ETL-Pipline for: 2026-02-05 ===
+2026-02-06 16:15:27,647 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2026-02-06 16:15:27,649 - __main__ - WARNING - Skipping Polygon: No data found.
+2026-02-06 16:15:28,079 - utils.db - INFO - Table 'stg_prices' truncated successfully.
+2026-02-06 16:15:28,094 - utils.db - DEBUG - Inserted 29 rows into staging.
+2026-02-06 16:15:28,206 - utils.db - INFO - DONE! 29 Datasets saved in fact_prices.
+2026-02-06 16:15:28,207 - __main__ - INFO - === Pipeline finished successfully ===
+2026-02-06 16:22:28,742 - __main__ - INFO - === Start ETL-Pipline for: 2026-02-05 ===
+2026-02-06 16:22:48,422 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2026-02-06 16:22:48,423 - __main__ - WARNING - Skipping Polygon: No data found.
+2026-02-06 16:22:48,957 - utils.db - INFO - Table 'stg_prices' truncated successfully.
+2026-02-06 16:22:48,974 - utils.db - DEBUG - Inserted 29 rows into staging.
+2026-02-06 16:22:49,098 - utils.db - INFO - DONE! 29 Datasets saved in fact_prices.
+2026-02-06 16:22:49,098 - __main__ - INFO - === Pipeline finished successfully ===
+2026-02-06 16:23:08,282 - __main__ - INFO - === Start ETL-Pipline for: 2026-02-05 ===
+2026-02-06 16:23:21,521 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2026-02-06 16:23:21,522 - __main__ - WARNING - Skipping Polygon: No data found.
+2026-02-06 16:23:21,847 - utils.db - INFO - Table 'stg_prices' truncated successfully.
+2026-02-06 16:23:21,860 - utils.db - DEBUG - Inserted 29 rows into staging.
+2026-02-06 16:23:21,963 - utils.db - INFO - DONE! 29 Datasets saved in fact_prices.
+2026-02-06 16:23:21,963 - __main__ - INFO - === Pipeline finished successfully ===
+2026-02-06 17:06:20,092 - __main__ - INFO - === Start ETL-Pipline for: 2026-02-05 ===
+2026-02-06 17:06:20,138 - __main__ - DEBUG - dim_date is empty. 
+ Start filling...
+2026-02-06 17:06:20,400 - utils.db - INFO - Date dimension populated successfully.
+2026-02-06 17:06:48,881 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2026-02-06 17:06:48,882 - __main__ - WARNING - Skipping Polygon: No data found.
+2026-02-06 17:06:49,272 - utils.db - INFO - Table 'stg_prices' truncated successfully.
+2026-02-06 17:06:49,286 - utils.db - DEBUG - Inserted 29 rows into staging.
+2026-02-06 17:06:49,396 - __main__ - INFO - Found 27 missing companies. Fetching info...
+2026-02-06 17:06:50,355 - utils.db - INFO - Inserted new company: Polkadot
+2026-02-06 17:06:51,285 - utils.db - INFO - Inserted new company: Dogecoin
+2026-02-06 17:06:54,761 - utils.db - INFO - Inserted new company: Tether
+2026-02-06 17:06:55,702 - utils.db - INFO - Inserted new company: HangSeng
+2026-02-06 17:06:59,757 - utils.db - INFO - Inserted new company: Ethereum
+2026-02-06 17:07:00,141 - utils.db - INFO - Inserted new company: DAX
+2026-02-06 17:07:00,956 - utils.db - INFO - Inserted new company: Russell2000
+2026-02-06 17:07:01,875 - utils.db - INFO - Inserted new company: NASDAQComposite
+2026-02-06 17:07:02,943 - utils.db - INFO - Inserted new company: S&P500
+2026-02-06 17:07:03,638 - utils.db - INFO - Inserted new company: EuroStoxx50
+2026-02-06 17:07:04,651 - utils.db - INFO - Inserted new company: Bitcoin
+2026-02-06 17:07:05,341 - utils.db - INFO - Inserted new company: MSCIWorld
+2026-02-06 17:07:06,238 - utils.db - INFO - Inserted new company: Nikkei225
+2026-02-06 17:07:06,969 - utils.db - INFO - Inserted new company: Sensex
+2026-02-06 17:07:08,234 - utils.db - INFO - Inserted new company: Litecoin
+2026-02-06 17:07:09,037 - utils.db - INFO - Inserted new company: NASDAQ100
+2026-02-06 17:07:10,337 - utils.db - INFO - Inserted new company: ShanghaiComposite
+2026-02-06 17:07:11,110 - utils.db - INFO - Inserted new company: FTSE100
+2026-02-06 17:07:12,668 - utils.db - INFO - Inserted new company: DowJones
+2026-02-06 17:07:13,666 - utils.db - INFO - Inserted new company: CAC40
+2026-02-06 17:07:14,316 - utils.db - INFO - Inserted new company: BinanceCoin
+2026-02-06 17:07:14,712 - utils.db - INFO - Inserted new company: XRP
+2026-02-06 17:07:16,096 - utils.db - INFO - Inserted new company: Cardano
+2026-02-06 17:07:16,709 - utils.db - INFO - Inserted new company: Tron
+2026-02-06 17:07:18,131 - utils.db - INFO - Inserted new company: SMI
+2026-02-06 17:07:18,812 - utils.db - INFO - Inserted new company: Solana
+2026-02-06 17:07:19,823 - utils.db - INFO - Inserted new company: Kospi
+2026-02-06 17:07:19,917 - utils.db - INFO - DONE! 29 Datasets saved in fact_prices.
+2026-02-06 17:07:19,918 - __main__ - INFO - === Pipeline finished successfully ===
