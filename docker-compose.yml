@@ -1,0 +1,36 @@
+services:
+  data-job:
+    build: .
+    tty: true #Hält den Container offen
+    stdin_open: true # Erlaubt eingaben
+    environment: 
+      - PYTHONUNBUFFERED=1
+      - DB_HOST=database                # MÖGLICHER FEHLER???
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+    volumes:
+      - .:/app
+    depends_on:
+      database:
+        condition: service_healthy
+    
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432" # host:cotainer
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  postgres_data:

@@ -51,6 +51,10 @@ def main():
    stg_processor = StgProcessor()
    db_con = PostSQLCon()
 
+   if not db_con.get_all_dates():
+      logger.debug("dim_date is empty. \n Start filling...")
+      db_con.create_dim_date()
+
    # 3. Load Config
    ticker_config = yaml_read("tickers.yaml")
    symbols = ticker_config["tickers"]

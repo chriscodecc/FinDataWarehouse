@@ -24,7 +24,7 @@ class StgProcessor():
 
         try:
             if isinstance(df_old.columns, pd.MultiIndex):
-                df_old.columns = df_old.columns.get_level_values[0]      # Removes empty columns axis 1 = columns 
+                df_old.columns = df_old.columns.get_level_values(0)     # Removes empty columns axis 1 = columns 
         except Exception as e:
             self.logger.warning(f"Index flatting warning: {e}")
 

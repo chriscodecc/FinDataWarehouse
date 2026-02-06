@@ -98,38 +98,31 @@ class PostgreSQLConnector():
 
     def upsert_fact_prices(self, df: pd.DataFrame) -> None:
         """Upsert daily price records into the fact_prices."""
-        df = df.drop(columns=["price_id"], errors="ignore")
-
-        # Deduplicate
-        df.drop_duplicates(subset=["date_id","company_id"], keep="last", inplace=True)
-        records = df.to_records(index=False).tolist()
-
-        if not records:
-            self.logger.info("No records to upsert into fact_prices.")
+        if df.empty:
+            self.logger.info("No Data to insert into fact_prices.")
             return
-      
+        
+        # df to table structure 
+        cols_to_insert = ["date_id", "company_id", "close_price", "high_price", "low_price", "open_price", "volume"]
+        df_final = df[cols_to_insert].copy()
+
         table_name = self.schema["tables"]["fact_prices"]["name"]
+        records = df_final.to_records(index=False).tolist()
 
-        # Build Query using sage SQL construction
-        insert_query = sql.SQL("""INSERT INTO {table} (date_id, company_id, close_price, high_price, low_price, open_price, volume)
-                                VALUES %s
-                                ON CONFLICT (date_id, company_id) DO UPDATE SET
-                                    close_price = EXCLUDED.close_price,
-                                    high_price = EXCLUDED.high_price,
-                                    low_price = EXCLUDED.low_price,
-                                    open_price = EXCLUDED.open_price,
-                                    volume = EXCLUDED.volume
-                                RETURNING price_id;
-                                """).format(
-                                table=sql.Identifier(table_name)
-        )                    
+        # build SQL-Query 
+        columns_sql = sql.SQL(", ").join(map(sql.Identifier, cols_to_insert))
+        query = sql.SQL("INSERT INTO {table} ({cols}) VALUES %s").format(
+            table=sql.Identifier(table_name),
+            cols=columns_sql
+        )
 
-        # 4. Execution with Context Managers
         with self.get_connection() as conn:
             with conn.cursor() as cur:
-                execute_values(cur, insert_query, records)
-                conn.commit()
-                self.logger.debug(f"Upsert succsesfull: {len(records)} rows processed.")
+                # 3. Massen-Insert
+                execute_values(cur, query, records)
+                conn.commit() 
+                self.logger.info(f"DONE! {len(df_final)} Datasets saved in fact_prices.")
+ 
 
     def insert_company(self, comp_info: dict) -> None:
         """Insert a new company into dim_company."""
@@ -155,6 +148,7 @@ class PostgreSQLConnector():
         """Populate dim_date."""
         dates = pd.date_range (start=start, end=end, freq="D")
         df = pd.DataFrame ({
+            "date_id" : dates.strftime("%Y%m%d").astype(int),
             "full_date" : dates,
             "day" : dates.day,
             "month" : dates.month,
@@ -163,12 +157,12 @@ class PostgreSQLConnector():
         df['full_date'] = df['full_date'].dt.date
         records = df.to_records(index=False).tolist()
 
-        table_date = table_stg_prices = self.schema["tables"]["dim_date"]["name"]
-        insert_query = sql.SQL("""INSERT INTO {table_date} (full_date, day, month, year) VALUES %s;""")
+        table_date = self.schema["tables"]["dim_date"]["name"]
+        insert_query = sql.SQL("""INSERT INTO {table} (date_id, full_date, day, month, year) VALUES %s;""").format(table=sql.Identifier(table_date))
         
         with self.get_connection() as conn:
             with conn.cursor() as cur:
-                cur.execute_values(cur, insert_query, records)
+                execute_values(cur, insert_query, records)
                 conn.commit()
                 self.logger.info("Date dimension populated successfully.")
 
@@ -223,7 +217,7 @@ class PostgreSQLConnector():
         except Exception as e:
             self.logger.error(f"Error truncating {table_Name}: {e}")
         
-        conn.close()
+        
     
     def get_dim_company_as_df(self) -> pd.DataFrame:
         schema = yaml_read("schema.yaml")
