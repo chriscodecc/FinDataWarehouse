@@ -60,7 +60,7 @@ class PostgreSQLConnector():
     def get_company_id(self, comp_code: str) -> int | None:
         """Fetch company_id by symbole."""
         rows = self.get_all_companies()
-        for comp_id, symbol in rows:
+        for comp_id, _ , symbol , *_ in rows:
             if normalize_symbol(comp_code) == normalize_symbol(symbol):
                 return comp_id
         return None
@@ -111,9 +111,20 @@ class PostgreSQLConnector():
 
         # build SQL-Query 
         columns_sql = sql.SQL(", ").join(map(sql.Identifier, cols_to_insert))
-        query = sql.SQL("INSERT INTO {table} ({cols}) VALUES %s").format(
+
+        update_step = sql.SQL("""
+            ON CONFLICT (date_id, company_id) 
+            DO UPDATE SET 
+            close_price = EXCLUDED.close_price,
+            high_price = EXCLUDED.high_price,
+            low_price = EXCLUDED.low_price,
+            open_price = EXCLUDED.open_price,
+            volume = EXCLUDED.volume
+        """)
+        query = sql.SQL("INSERT INTO {table} ({cols}) VALUES %s {conflict}").format(
             table=sql.Identifier(table_name),
-            cols=columns_sql
+            cols=columns_sql,
+            conflict = update_step
         )
 
         with self.get_connection() as conn:

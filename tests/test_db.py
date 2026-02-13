@@ -6,9 +6,11 @@ from psycopg2 import sql
 from utils.db import PostgreSQLConnector
 from utils.config import yaml_read
 
+@pytest.fixture
+def db_con():
+    return PostgreSQLConnector()
 
-def test_get_all_company_as_df(mocker):
-    db_con = PostgreSQLConnector()
+def test_get_all_company_as_df(mocker, db_con):
     mock_get_companies = mocker.patch.object(
         db_con,
         "get_all_companies"
@@ -29,8 +31,7 @@ def test_get_all_company_as_df(mocker):
     pd.testing.assert_frame_equal(excepted_df, result_df)
     mock_get_companies.assert_called_once()
 
-def test_insert_company(mocker):
-    db_con = PostgreSQLConnector()
+def test_insert_company(mocker, db_con):
     #Stunt double for cur and con
     mock_cursor = MagicMock()
     mock_con = MagicMock()
@@ -42,8 +43,6 @@ def test_insert_company(mocker):
     mock_cursor.__enter__.return_value = mock_cursor
     # for with conn
     mock_con.__enter__.return_value = mock_con
-
-    db_con.get_connection = mocker.Mock(return_value=mock_con)
 
     mocker.patch.object(
         db_con,

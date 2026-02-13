@@ -1,22 +1,30 @@
 services:
   data-job:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     tty: true #Hält den Container offen
     stdin_open: true # Erlaubt eingaben
     command: tail -f /dev/null
+      - TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal
     environment: 
       - PYTHONUNBUFFERED=1
       - DB_HOST=database                # MÖGLICHER FEHLER???
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
+      - TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal
+      - TESTCONTAINERS_RYUK_DISABLED=true
     volumes:
       - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       database:
         condition: service_healthy
     ports:
       - "8000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     
   database:
     image: postgres:15

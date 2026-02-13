@@ -2,9 +2,14 @@ import pandas as pd
 import numpy as np
 from utils.helpers import yaml_read
 from extract.api_client import YahooFinanceClient
+import pytest
 
-def test_extract_meta():
-    api_client = YahooFinanceClient()
+@pytest.fixture
+def api_client():
+    return YahooFinanceClient()
+
+def test_extract_meta(api_client):
+
     symbole = "DAX"
     info_dic = {
         "longName" : "Global X DAX Germany ETF",
@@ -22,8 +27,7 @@ def test_extract_meta():
     assert result_dic["industry"] == "Index" 
     assert result_dic["symbol"] == "DAX" 
 
-def test_extract_meta_fallback_to_shortName():
-    api_client = YahooFinanceClient()
+def test_extract_meta_fallback_to_shortName(api_client):
     symbole = "DAX"
     info_dic = {
         "shortName" : "DAX",
@@ -37,8 +41,7 @@ def test_extract_meta_fallback_to_shortName():
     result_dic = api_client.extract_meta(info_dic, symbole)
     assert result_dic["name"] == "DAX"
 
-def test_extract_meta_ticker_fallback_to_symbol():
-    api_client = YahooFinanceClient()
+def test_extract_meta_ticker_fallback_to_symbol(api_client):
     symbole = "DAX"
     info_dic = {
         "country" : "Germany",
@@ -51,8 +54,7 @@ def test_extract_meta_ticker_fallback_to_symbol():
     result_dic = api_client.extract_meta(info_dic, symbole)
     assert result_dic["name"] == symbole
 
-def test_extract_meta_ticker_fallback_to_symbol():
-    api_client = YahooFinanceClient()
+def test_extract_meta_ticker_fallback_to_symbol(api_client):
     symbole = "DAX"
     info_dic = {
         "industry" : "Index",
@@ -63,8 +65,7 @@ def test_extract_meta_ticker_fallback_to_symbol():
     result_dic = api_client.extract_meta(info_dic, symbole)
     assert result_dic["country"] == "Global"
 
-def test_fetch_finace_data_is_None(mocker):
-    api_client = YahooFinanceClient()
+def test_fetch_finace_data_is_None(mocker, api_client):
     mock_get_data = mocker.patch.object(
         api_client,
         "fetch_finance_data"

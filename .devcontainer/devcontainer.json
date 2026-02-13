@@ -1,20 +1,12 @@
 {
     "name": "FinDataWarehouse Dev",
-    "dockerComposeFile": [
-        "../docker-compose.yml"
-    ],
+    "dockerComposeFile": ["../docker-compose.yml"],
     "service": "data-job", 
     "workspaceFolder": "/app",
     "customizations": {
         "vscode": {
-            "extensions": [
-                "ms-python.python",       // Python Support
-                "ms-python.vscode-pylance", // Intelligente Code-Vorschläge
-                "ckdtw.mgr-db-client-vscode" // DB-Client direkt in VS Code
-            ]
+            "extensions": ["ms-python.python"]
         }
     },
-    // Verhindert, dass der Container nach dem Start sofort wieder stoppt
-    "overrideCommand": true, 
-    "remoteUser": "root"
+    "remoteUser": "vscode"
 }

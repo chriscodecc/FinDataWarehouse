@@ -2,11 +2,13 @@ import pandas as pd
 import numpy as np
 from utils.helpers import yaml_read
 from transform.stg_processor import StgProcessor
+import pytest
 
+@pytest.fixture
+def stg_Processor():
+    return StgProcessor()
 
-def test_normalize_df_for_stg_prices():
-    stgProz = StgProcessor()
-
+def test_normalize_df_for_stg_prices(stg_Processor):
     columns = pd.MultiIndex.from_tuples([
         ('Price', 'Date'),
         ('Price', 'Close'),
@@ -30,7 +32,7 @@ def test_normalize_df_for_stg_prices():
         ['2025-10-29', 51307.648438, 51412.96875, 50365.621094, 50453.640625, 129700000]
     ]
     df_test = pd.DataFrame(data, columns=columns)
-    df_test = stgProz.normalize_df_for_stg_prices(df_test, "^N225")
+    df_test = stg_Processor.normalize_df_for_stg_prices(df_test, "^N225")
     df_raw = pd.DataFrame(data=None, columns=columns)
     
 
@@ -39,10 +41,9 @@ def test_normalize_df_for_stg_prices():
     df_normalized = pd.DataFrame(columns=cols)
 
     pd.testing.assert_index_equal(df_test.columns, df_normalized.columns) 
-    assert stgProz.normalize_df_for_stg_prices(df_raw, "^N225") is None
+    assert stg_Processor.normalize_df_for_stg_prices(df_raw, "^N225") is None
 
-def test_get_enriched_df():
-    stgProzessor = StgProcessor()
+def test_get_enriched_df(stg_Processor):
     dim_date = pd.DataFrame({
         "date_id" : [55],
         "full_date" : ["2025-10-27"],
@@ -90,14 +91,12 @@ def test_get_enriched_df():
         "year" : [2025]
     })
     
-    result_df = stgProzessor.get_enriched_df(stg_data_df, dim_comp, dim_date)
+    result_df = stg_Processor.get_enriched_df(stg_data_df, dim_comp, dim_date)
 
     pd.testing.assert_frame_equal(result_df, expected_df)
 
 
-def test_stg_normalize_for_fact_prices():
-    stgProzessor = StgProcessor()
-    
+def test_stg_normalize_for_fact_prices(stg_Processor):
     enriched_df = pd.DataFrame({
         "load_timestamp" : ["2025-11-01 11:37:32.224135 +00:00"],
          "asset" : ["DAX"], 
@@ -128,7 +127,7 @@ def test_stg_normalize_for_fact_prices():
         "volume" : [122100000]
     })
 
-    result_df = stgProzessor.stg_normalize_for_fact_prices(excepted_df)
+    result_df = stg_Processor.stg_normalize_for_fact_prices(excepted_df)
 
     pd.testing.assert_frame_equal(result_df, excepted_df)
     

@@ -1,0 +1,15 @@
+1. Container in Container
+    1.1 (Leitung herstellen) Den Docker-Socket des Hosts /var/run/docker.sock per Volume-Mount in den Container spiegeln
+    1.2 (Telefon bereitstellen) Docker CLI(tool) im Image installieren damit der testcontainer RUN Befehle absetzen kann 
+    --- Identität & Berechtigung ---
+    1.3 Stage-Isolation: 
+    1.4 vsCode User benötigt die Berechtigungen damit er als "Nicht-Root" User Befehle senden darf.
+
+
+2. testcontainer
+    2.1 Inception-Netzwerk Code in COntainer A sucht DB in Container B
+        - localhost -> Container A 
+        - host.docker.internal und host-gatway (extra-hosts) die Verbindung in Container Befehle
+    2.2 Timeing TCP-Port kann offen sein, aber nocht Zeit benötigen bis er Befehle annehmen kann
+    2.3 Dynamische INfrastruktur. testcontainer nutzt zufällige Ports. Dh DYNAMSICHE Abfrage über get_exposed_port
+    2.4 Ryuk_Reaper (Aufräumer) deaktivieren damit er die Verbindung nicht blockiert. 
