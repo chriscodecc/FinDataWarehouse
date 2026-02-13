@@ -6,7 +6,9 @@
 
 ## Project Overview
 
-FinDataWarehouse is a Python-based data warehouse project that collects, transforms, and stores financial market data (e.g., stock prices, indices, cryptocurrencies) in a PostgreSQL database. The goal is to provide a clean and scalable data foundation for analysis and visualization.
+FinDataWarehouse is a containerized data engineering platform designed to automate the collection, transformation, and storage of global financial market data (stocks, indices, cryptocurrencies) within a PostgreSQL environment.
+
+The project has evolved from a pure Python ETL pipeline into a robust Dockerized infrastructure, utilizing Testcontainers for reliable, automated integration testing. It serves as a scalable foundation for financial analysis and visualization.
 
 ---
 
