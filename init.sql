@@ -1,4 +1,4 @@
--- Erstellen der Dimension: Unternehmen
+-- Unternehmen
 CREATE TABLE IF NOT EXISTS dim_company (
     company_id SERIAL PRIMARY KEY,
     name VARCHAR(255),
@@ -7,16 +7,16 @@ CREATE TABLE IF NOT EXISTS dim_company (
     industry VARCHAR(255)
 );
 
--- Erstellen der Dimension: Zeit
+-- Datum
 CREATE TABLE IF NOT EXISTS dim_date (
-    date_id INT PRIMARY KEY, -- Format YYYYMMDD oft üblich
+    date_id INT PRIMARY KEY, -- Format YYYYMMDD 
     full_date DATE UNIQUE NOT NULL,
     day INT,
     month INT,
     year INT
 );
 
--- Erstellen der Staging-Tabelle (Rohdaten-Zwischenspeicher)
+-- Staging-Tabelle (Rohdaten-Zwischenspeicher)
 CREATE TABLE IF NOT EXISTS stg_prices (
     load_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     asset VARCHAR(20),
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS stg_prices (
     volume BIGINT
 );
 
--- Erstellen der Fact-Tabelle (Die eigentlichen Kennzahlen)
+-- Fact-Tabelle 
 CREATE TABLE IF NOT EXISTS fact_prices (
     price_id SERIAL PRIMARY KEY,
     date_id INT REFERENCES dim_date(date_id),
@@ -37,5 +37,7 @@ CREATE TABLE IF NOT EXISTS fact_prices (
     high_price NUMERIC(20, 6),
     low_price NUMERIC(20, 6),
     open_price NUMERIC(20, 6),
-    volume BIGINT
+    volume BIGINT,
+    UNIQUE (date_id, company_id)
 );
+

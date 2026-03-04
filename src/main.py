@@ -7,6 +7,8 @@ from utils.config import yaml_read
 from transform.csv_processor import CSVProcessor
 from transform.stg_processor import StgProcessor
 from utils.logger import get_logger
+import os
+from dotenv import load_dotenv
 
 logger = get_logger(__name__)
 
@@ -39,6 +41,14 @@ def handle_missing_companies(stg_df: pd.DataFrame, dim_comp_df: pd.DataFrame, db
 logger = get_logger(__name__)
 
 def main():
+   conn_params_local = {
+      "host": "database",
+      "port": 5432,
+      "user": os.getenv("DB_USER"),
+      "password": os.getenv("DB_PASSWORD"),
+      "database": os.getenv("DB_NAME")
+   }
+
    # 1. Setup Dates
    today = datetime.now()
    yesterdays = today - timedelta(days=1)

@@ -5,10 +5,18 @@ from unittest.mock import MagicMock, patch, ANY
 from psycopg2 import sql
 from utils.db import PostgreSQLConnector
 from utils.config import yaml_read
+import os
 
 @pytest.fixture
 def db_con():
-    return PostgreSQLConnector()
+    conn_params = {
+      "host": "database",
+      "port": 5432,
+      "user": os.getenv("DB_USER"),
+      "password": os.getenv("DB_PASSWORD"),
+      "database": os.getenv("DB_NAME")
+   }
+    return PostgreSQLConnector(conn_params)
 
 def test_get_all_company_as_df(mocker, db_con):
     mock_get_companies = mocker.patch.object(
@@ -76,12 +84,11 @@ def test_insert_company(mocker, db_con):
     
     mock_cursor.execute.assert_called_once_with(expected_sql, expected_values)
 
-def test_upsert_fact_prices(mocker):
+def test_upsert_fact_prices(mocker, db_con):
     # 1. FIX: Psycopg2 C-Funktion patchen, damit MagicMock akzeptiert wird
     # KEINE AHNUNG 
     mocker.patch("psycopg2.extensions.quote_ident", side_effect=lambda s, c: f'"{s}"')
     
-    db_con = PostgreSQLConnector()
     mock_con = MagicMock()
     mock_cursor = MagicMock()
 

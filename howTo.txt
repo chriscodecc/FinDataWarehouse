@@ -13,3 +13,48 @@
     2.2 Timeing TCP-Port kann offen sein, aber nocht Zeit benötigen bis er Befehle annehmen kann
     2.3 Dynamische INfrastruktur. testcontainer nutzt zufällige Ports. Dh DYNAMSICHE Abfrage über get_exposed_port
     2.4 Ryuk_Reaper (Aufräumer) deaktivieren damit er die Verbindung nicht blockiert. 
+
+
+##################################################################################################################
+
+Dockerfile (Umgebung) Bauen der einzelenen Objekte
+    - builder: 
+        -> Installation aller Komponenten die zum Komilierung von Python-Paketen benötigt werden (gcc, python3-dev...)
+        -> --user installation der Pakete in /root/.local trennung vom System Python
+
+    - final (eigentliche Image)
+        -> COPY --from=builder: Ordner local wird "mitgenommen" der rest Compiler, Cache bleibt in der ersten Stage liegen
+        -> User Managment: 
+            # Gruppe docker_host mit der ID 999 (standart für die Gruppe mit docker zugriff) 
+            # Erstellen user vscode und hinzufügen in die Gruppe (nur so ist es möglich das vscode mit dem Docker-Daemon 
+              (testcontainer) sprechen
+            # USER vscode kein root User mit allen Rechten 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+docker-compose (Orchestrierung) Definiert wie die Objekte miteinander reden
+    - volumes: /var/run/docker.sock
+        -> Verbindung zwischen Container und Dockerdienst auf dem PC (damit der testcontainer postgres-Instanzen starten kann)
+
+    - extra_hosts: host.docker.internal
+        -> Im Docker Netzwerk ist "localhost" immer der Container selbst, dies ist der Alias um nach draußen mit dem 
+            Host-PC zu kommunizieren  
+
+    - depends_on + healthcheck
+        -> Warten bis die database bereit ist, verhindert "Race Conditions" beim start
+
+    - TESTCONTAINERS_RYUK_DISABLED
+        -> "Wachhund COntainer.Führt oft zu Netzwerk Voodoo. Dekativieren -> stabilere lokale Tests 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+devcontainer.json (IDE-Integration) (Fernbedinung für vs Code)
+    - "service": "data-job": Such in der Docker-Compose den Service "data-job" und nim dort den Container 
+    
+    - "remoteUser": "vscode" : vscode logt sich als User ein Linx gewährt ZUgriff auf /app
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Test Starten
+1. vscode in data-job sendet einen Befehl an /var/run/docker.sock
+2. Der Docker-Daemon des PCs empfängt den Befehl und startet einen neuen Postgres Container neben den anderen COntainer
+3. Testcontainer fragt Daemon auf welchem Port Postgres läuft
+4. Daemon antwortet 
+5. Python verbindet host.docker.internal:X mit dieser DB

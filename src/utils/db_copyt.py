@@ -19,20 +19,37 @@ class PostgreSQLConnector():
     Handles connections, queries, and bulk operations safely using psycopg2.sql.
     """
     
-    def __init__(self, conn_params:dict):
-        self.conn_params = conn_params
+    def __init__(self):
         self.logger = get_logger(__name__)
+        #self.conn = None
+        self.config_path = CONFIG_DIR / "config.yaml"
+        
+        # Load environment variables 
+        load_dotenv(BASE_DIR / ".env")
 
          # Load schema and config
         self.schema = yaml_read("schema.yaml")
+        with open(self.config_path, "r") as config_yaml:
+            self.app_config = yaml.safe_load(config_yaml)
 
+        # Database Credentials
+        self.user = os.getenv("DB_USER")
+        self.password = os.getenv("DB_PASSWORD")
+        self.host = self.app_config["database"]["host"]
+        self.port = self.app_config["database"]["port"]
+        self.dbname = self.app_config["database"]["name"]
 
     def get_connection(self):
         """Establich a new database connection."""
 
         try:
-           return psy.connect(**self.conn_params)
-            
+           return psy.connect(
+               dbname=self.dbname, 
+               user=self.user, 
+               password=self.password, 
+               host=self.host, 
+               port=self.port
+            )          
         except psy.OperationalError as e:
             self.logger.critical("Could not connect to DB: {e}")
             raise

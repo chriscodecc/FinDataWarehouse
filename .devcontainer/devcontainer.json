@@ -8,5 +8,8 @@
             "extensions": ["ms-python.python"]
         }
     },
-    "remoteUser": "vscode"
+    "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+  }
 }
