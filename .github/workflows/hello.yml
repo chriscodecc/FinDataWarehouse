@@ -19,4 +19,4 @@ jobs:
 
       - name: CI Tests
         run: |
-          pytest pytest-cov
+          pytest pytest
