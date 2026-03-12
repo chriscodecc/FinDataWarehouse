@@ -1,9 +1,6 @@
 name: Python Integration Tests
 on: [push]
 
-name: Python Integration Tests
-on: [push] # Wird bei jedem Push ausgeführt
-
 jobs:
   build:
     runs-on: ubuntu-latest
