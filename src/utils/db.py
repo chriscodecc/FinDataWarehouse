@@ -10,6 +10,7 @@ import pandas as pd
 from utils.config import yaml_read
 from utils.helpers import normalize_symbol
 from sqlalchemy import create_engine
+from sqlalchemy.exc import IntegrityError
 import re
 
 
@@ -25,7 +26,6 @@ class PostgreSQLConnector():
 
          # Load schema and config
         self.schema = yaml_read("schema.yaml")
-
 
     def get_connection(self):
         """Establich a new database connection."""
@@ -66,12 +66,12 @@ class PostgreSQLConnector():
         with self.get_connection() as conn:
             with conn.cursor() as cur:
                 cur.execute(query)
-                return cur.fetchall()     
+                return cur.fetchall() 
 
     def get_date_id(self, full_date : str) -> int | None:
         """Fetch date_id by date string."""
         table_name = self.schema["tables"]["dim_date"]["name"]
-        query = sql.SQL("SELECT date_id FROME {table} WHERE full_date= %s").format(table=sql.Identifier(table_name))
+        query = sql.SQL("SELECT date_id FROM {table} WHERE full_date= %s").format(table=sql.Identifier(table_name))
 
         with self.get_connection() as conn:
             with conn.cursor() as cur:
@@ -104,6 +104,7 @@ class PostgreSQLConnector():
             open_price = EXCLUDED.open_price,
             volume = EXCLUDED.volume
         """)
+
         query = sql.SQL("INSERT INTO {table} ({cols}) VALUES %s {conflict}").format(
             table=sql.Identifier(table_name),
             cols=columns_sql,
@@ -118,22 +119,29 @@ class PostgreSQLConnector():
                 self.logger.info(f"DONE! {len(df_final)} Datasets saved in fact_prices.")
 
     def insert_company(self, comp_info: dict) -> None:
-        """Insert a new company into dim_company."""
+        """Insert a new company into dim_company."""    
         table_name = self.schema["tables"]["dim_company"]["name"]
-        insert_query = sql.SQL("""
-                               INSERT INTO {table} (name, symbol, country, industry)
-                               VALUES (%s, %s, %s, %s) 
-                               RETURNING company_id;
-        """).format(table=sql.Identifier(table_name))
+        update_step = sql.SQL(""" ON CONFLICT (symbol) DO NOTHING """)
+        insert_query = sql.SQL(""" INSERT INTO {table} (name, symbol, country, industry) VALUES (%s, %s, %s, %s) {conflict} RETURNING company_id; """).format(table=sql.Identifier(
+                table_name),
+                conflict = update_step
+            )
 
         with self.get_connection() as conn:
             with conn.cursor() as cur:
-                cur.execute(insert_query, ( 
+                debug_query = cur.mogrify(insert_query, (
                     comp_info.get("name"),
                     comp_info.get("symbol"),
                     comp_info.get("country"),
                     comp_info.get("industry")
-                ))
+                    ))
+                print(debug_query.decode('utf-8'))
+                cur.execute(insert_query, ( 
+                comp_info.get("name"),
+                comp_info.get("symbol"),
+                comp_info.get("country"),
+                comp_info.get("industry")
+                            ))
                 conn.commit()
                 self.logger.info(f"Inserted new company: {comp_info.get('symbol')}")   
 
@@ -197,13 +205,14 @@ class PostgreSQLConnector():
         
     def truncate_table(self, table_Name: str) -> None:
         """Safe truncate methode."""
+        
         query = sql.SQL("TRUNCATE TABLE {table}").format(table=sql.Identifier(table_Name)) 
         try:
             with self.get_connection() as conn:
                 with conn.cursor() as cur:
                     cur.execute("SET LOCAL statement_timeout = '5s';")
                     cur.execute(query)
-                    conn.commit()        
+                conn.commit()        
             self.logger.info(f"Table '{table_Name}' truncated successfully.")    
         except errors.LockNotAvailable:
             self.logger.error(f"Timeout. The table {table_Name} is block by another prozess!")

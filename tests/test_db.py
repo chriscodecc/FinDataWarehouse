@@ -69,11 +69,11 @@ def test_insert_company(mocker, db_con):
 
     schema = yaml_read("schema.yaml")
     table_name = schema["tables"]["dim_company"]["name"]
-    expected_sql = sql.SQL("""
-                               INSERT INTO {table} (name, symbol, country, industry)
-                               VALUES (%s, %s, %s, %s) 
-                               RETURNING company_id;
-        """).format(table=sql.Identifier(table_name))
+    update_step = sql.SQL(""" ON CONFLICT (symbol) DO NOTHING """)
+    expected_sql = sql.SQL(""" INSERT INTO {table} (name, symbol, country, industry) VALUES (%s, %s, %s, %s) {conflict} RETURNING company_id; """).format(table=sql.Identifier(
+                table_name),
+                conflict = update_step
+            )
     
     expected_values = (
         comp_dic["name"],
@@ -81,6 +81,7 @@ def test_insert_company(mocker, db_con):
         comp_dic["country"],
         comp_dic["industry"]
     )
+
     
     mock_cursor.execute.assert_called_once_with(expected_sql, expected_values)
 

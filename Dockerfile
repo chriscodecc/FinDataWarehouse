@@ -1,5 +1,5 @@
 FROM python:3.12-slim AS builder
-#sudo chmod 666 /var/run/docker.sock
+# sudo chmod 666 /var/run/docker.sock
 WORKDIR /app
 RUN apt-get update && apt-get install -y \
     libpq-dev \
