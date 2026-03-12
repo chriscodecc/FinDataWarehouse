@@ -22,8 +22,7 @@ def postgre_db(request):
             "password": postgres.password,
             "database": postgres.dbname,
         }
-        #if conn_params["host"] == "127.0.0.1" or conn_params["host"] == "localhost":
-         #   conn_params["host"] = "host.docker.internal"
+        
 
         # 2. Inizialize Schema
         with psycopg2.connect(**conn_params) as conn:
