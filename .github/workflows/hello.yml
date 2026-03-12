@@ -1,0 +1,20 @@
+name: Python Integration Tests
+on: [push]
+
+name: Python Integration Tests
+on: [push] # Wird bei jedem Push ausgeführt
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Python Setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Testlauf simulieren
+        run: echo "Hier würden deine Pytests laufen!"
