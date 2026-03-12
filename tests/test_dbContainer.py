@@ -22,8 +22,8 @@ def postgre_db(request):
             "password": postgres.password,
             "database": postgres.dbname,
         }
-        if conn_params["host"] == "127.0.0.1" or conn_params["host"] == "localhost":
-            conn_params["host"] = "host.docker.internal"
+        #if conn_params["host"] == "127.0.0.1" or conn_params["host"] == "localhost":
+         #   conn_params["host"] = "host.docker.internal"
 
         # 2. Inizialize Schema
         with psycopg2.connect(**conn_params) as conn:
@@ -285,7 +285,7 @@ def test_truncate_table(postgre_db):
 
     all_comps = db.get_all_companies()
     assert len(all_comps) > 0
-    breakpoint()
+    
     db.truncate_table("stg_prices")
     all_comps_empty = db.get_stg_prices()
     assert all_comps_empty is None
