@@ -45,7 +45,7 @@ def test_table_exists(postgre_db):
 def test_get_connection(postgre_db):
     db = PostgreSQLConnector(postgre_db)
     con = db.get_connection()
-    assert con.info.host ==  "host.docker.internal"
+    assert con.status == psycopg2.extensions.STATUS_READY
 
 
 def test_upsert_fact_prices(postgre_db):
@@ -103,7 +103,6 @@ def test_upsert_fact_prices(postgre_db):
 
     assert actual_price == 22, f"Erwartet 22, aber bekam {actual_price}"
     assert not insert_value.empty, "Der Datensatz mit price_id 2 wurde nicht gefunden!"
-
 
 def test_get_all_companies(postgre_db):
     db = PostgreSQLConnector(postgre_db)
@@ -240,7 +239,7 @@ def test_insert_to_staging(postgre_db):
         comp_counter += 1
         load_timestamp, asset, full_date, open_price, high_price, low_price, close_price, volume = comp
 
-        if asset == "ins1" and "load_timestampand" is not None and  low_price == 10 and volume == 121:
+        if asset == "ins1" and "load_timestampand" != None and  low_price == 10 and volume == 121:
             value_is_in = True
             
 
