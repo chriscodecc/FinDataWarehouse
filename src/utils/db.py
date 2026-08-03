@@ -88,6 +88,8 @@ class PostgreSQLConnector():
         # df to table structure 
         cols_to_insert = ["date_id", "company_id", "close_price", "high_price", "low_price", "open_price", "volume"]
         df_final = df[cols_to_insert].copy()
+        # Remove duplicates
+        df_final = df_final.drop_duplicates(subset=['date_id', 'company_id'], keep='last')
 
         table_name = self.schema["tables"]["fact_prices"]["name"]
         records = df_final.to_records(index=False).tolist()

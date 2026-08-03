@@ -292,3 +292,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 2025-10-24 17:24:31,284 - __main__ - INFO - SCHRIT 8
 2025-10-24 17:24:31,346 - utils.db - DEBUG - Upsert succsesfull
 
+2026-06-11 13:17:19,164 - __main__ - INFO - === Start ETL-Pipline for: 2026-06-10 ===
+2026-06-11 13:17:19,170 - __main__ - ERROR - Critical Pipeline Error: PostgreSQLConnector.__init__() missing 1 required positional argument: 'conn_params'
+Traceback (most recent call last):
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 127, in <module>
+    main()
+    ~~~~^^
+  File "C:\Development\Projects\FinDataWarehouse\src\main.py", line 62, in main
+    db_con = PostSQLCon()
+TypeError: PostgreSQLConnector.__init__() missing 1 required positional argument: 'conn_params'

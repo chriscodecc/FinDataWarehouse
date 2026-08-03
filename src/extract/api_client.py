@@ -38,6 +38,8 @@ class YahooFinanceClient:
         Fetch historical fincace data.
         Returns DataFrame if successful, None otherwise.
         """
+
+        print("################################################# DEBUG: start: " + date + " end: " + endDate)
         mapped_symbol = self.get_mapping_for_company(symbol)
         date_obj = datetime.strptime(date, "%Y-%m-%d")
 

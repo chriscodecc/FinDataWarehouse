@@ -10,7 +10,7 @@ services:
       - TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal
     environment: 
       - PYTHONUNBUFFERED=1
-      - DB_HOST=database                # MÖGLICHER FEHLER???
+      - DB_HOST=database               
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
@@ -34,7 +34,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "5432:5432" # host:cotainer
+      - "5433:5432" # host:cotainer
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 5s

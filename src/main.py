@@ -53,13 +53,14 @@ def main():
    today = datetime.now()
    yesterdays = today - timedelta(days=1)
    date_to_fetch = yesterdays.strftime("%Y-%m-%d")
+   date_to_fetch_today = today.strftime("%Y-%m-%d")
 
    logger.info(f"=== Start ETL-Pipline for: {date_to_fetch} ===")
 
    # 2. Initialize Components
    yf_client = YahooFinanceClient()
    stg_processor = StgProcessor()
-   db_con = PostSQLCon()
+   db_con = PostSQLCon(conn_params_local)
 
    if not db_con.get_all_dates() or len(db_con.get_all_dates()) <= 0:
       logger.debug("dim_date is empty. \n Start filling...")
@@ -76,11 +77,15 @@ def main():
       end_date = str(ticker_config["end_date"])
    else:
       start_date = str(date_to_fetch)
+      end_date = None
 
    # 4. EXTRACT & TRANSFORM (Staging)
    stg_data_list = []
    for symbol in symbols:
-      df = yf_client.fetch_finance_data(symbol, date_to_fetch)
+      if end_date:
+         df = yf_client.fetch_finance_data(symbol, start_date, end_date)
+      else:
+         df = yf_client.fetch_finance_data(symbol, start_date)
       if df is not None and not df.empty:
          df_norm = stg_processor.normalize_df_for_stg_prices(df, symbol)
          if df_norm is not None:

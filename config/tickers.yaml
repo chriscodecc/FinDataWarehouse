@@ -33,5 +33,5 @@ tickers:
 period:
     use_start_end_date: false
 
-start_date: 2025-01-01
-end_date: 2025-10-20
+start_date: 2026-06-01
+end_date: 2026-06-19
