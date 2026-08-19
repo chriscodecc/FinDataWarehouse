@@ -7,7 +7,6 @@ services:
     tty: true #Hält den Container offen
     stdin_open: true # Erlaubt eingaben
     command: tail -f /dev/null
-      - TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal
     environment: 
       - PYTHONUNBUFFERED=1
       - DB_HOST=database               
@@ -44,5 +43,24 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
+  db-seeder:
+    image: python:3.11-slim
+    container_name: db_seeder
+    depends_on:
+      database:
+        condition: service_healthy 
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      DB_HOST: database 
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt && python src/main.py"
+      
 volumes:
   postgres_data:

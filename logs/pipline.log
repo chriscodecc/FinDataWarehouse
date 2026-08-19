@@ -1829,3 +1829,34 @@ ValueError: month must be in 1..12
 2026-07-03 11:37:03,636 - utils.db - DEBUG - Inserted 29 rows into staging.
 2026-07-03 11:37:03,764 - utils.db - INFO - DONE! 27 Datasets saved in fact_prices.
 2026-07-03 11:37:03,764 - __main__ - INFO - === Pipeline finished successfully ===
+2026-08-19 06:43:08,764 - __main__ - INFO - === Start ETL-Pipline for: 2026-08-18 ===
+2026-08-19 06:43:17,858 - extract.api_client - ERROR - ShanghaiComposite yFinace data are empty 
+2026-08-19 06:43:17,859 - __main__ - WARNING - Skipping ShanghaiComposite: No data found.
+2026-08-19 06:43:20,989 - extract.api_client - ERROR - Bitcoin yFinace data are empty 
+2026-08-19 06:43:20,989 - __main__ - WARNING - Skipping Bitcoin: No data found.
+2026-08-19 06:43:21,491 - extract.api_client - ERROR - Ethereum yFinace data are empty 
+2026-08-19 06:43:21,491 - __main__ - WARNING - Skipping Ethereum: No data found.
+2026-08-19 06:43:21,999 - extract.api_client - ERROR - Tether yFinace data are empty 
+2026-08-19 06:43:21,999 - __main__ - WARNING - Skipping Tether: No data found.
+2026-08-19 06:43:22,509 - extract.api_client - ERROR - BinanceCoin yFinace data are empty 
+2026-08-19 06:43:22,509 - __main__ - WARNING - Skipping BinanceCoin: No data found.
+2026-08-19 06:43:23,233 - extract.api_client - ERROR - XRP yFinace data are empty 
+2026-08-19 06:43:23,233 - __main__ - WARNING - Skipping XRP: No data found.
+2026-08-19 06:43:23,802 - extract.api_client - ERROR - Cardano yFinace data are empty 
+2026-08-19 06:43:23,802 - __main__ - WARNING - Skipping Cardano: No data found.
+2026-08-19 06:43:24,331 - extract.api_client - ERROR - Solana yFinace data are empty 
+2026-08-19 06:43:24,331 - __main__ - WARNING - Skipping Solana: No data found.
+2026-08-19 06:43:25,030 - extract.api_client - ERROR - Dogecoin yFinace data are empty 
+2026-08-19 06:43:25,031 - __main__ - WARNING - Skipping Dogecoin: No data found.
+2026-08-19 06:43:25,518 - extract.api_client - ERROR - Polkadot yFinace data are empty 
+2026-08-19 06:43:25,518 - __main__ - WARNING - Skipping Polkadot: No data found.
+2026-08-19 06:43:26,004 - extract.api_client - ERROR - Tron yFinace data are empty 
+2026-08-19 06:43:26,004 - __main__ - WARNING - Skipping Tron: No data found.
+2026-08-19 06:43:26,479 - extract.api_client - ERROR - Polygon yFinace data are empty 
+2026-08-19 06:43:26,479 - __main__ - WARNING - Skipping Polygon: No data found.
+2026-08-19 06:43:26,983 - extract.api_client - ERROR - Litecoin yFinace data are empty 
+2026-08-19 06:43:26,983 - __main__ - WARNING - Skipping Litecoin: No data found.
+2026-08-19 06:43:27,005 - utils.db - INFO - Table 'stg_prices' truncated successfully.
+2026-08-19 06:43:27,016 - utils.db - DEBUG - Inserted 17 rows into staging.
+2026-08-19 06:43:27,100 - utils.db - INFO - DONE! 15 Datasets saved in fact_prices.
+2026-08-19 06:43:27,101 - __main__ - INFO - === Pipeline finished successfully ===
