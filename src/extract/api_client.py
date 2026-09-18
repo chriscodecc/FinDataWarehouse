@@ -33,7 +33,7 @@ class YahooFinanceClient:
             "industry": info.get("industry") or info.get("sector") or info.get("quoteType") or "Unknown"
         }    
 
-    def fetch_finance_data(self, symbol, date="2025-09-12", endDate = "") -> pd.DataFrame | None:
+    def fetch_finance_data(self, symbol, date, endDate) -> pd.DataFrame | None:
         """
         Fetch historical fincace data.
         Returns DataFrame if successful, None otherwise.
