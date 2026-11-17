@@ -33,5 +33,6 @@ tickers:
 period:
     use_start_end_date: false
 
-start_date: 2026-06-01
-end_date: 2026-06-19
+# Start is EARLIER THEN END!!!
+start_date: 2026-01-15
+end_date: 2026-09-18

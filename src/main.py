@@ -9,7 +9,7 @@ from transform.stg_processor import StgProcessor
 from utils.logger import get_logger
 import os
 from dotenv import load_dotenv
-
+# docker-compose run --rm data-job python src/main.py
 logger = get_logger(__name__)
 
 #from utils.paths import BASE_DIR, CONFIG_DIR
@@ -76,8 +76,8 @@ def main():
       start_date = str(ticker_config["start_date"])
       end_date = str(ticker_config["end_date"])
    else:
-      start_date = str(date_to_fetch)
-      end_date = None
+      start_date = str(date_to_fetch_today)
+      end_date = start_date
 
    # 4. EXTRACT & TRANSFORM (Staging)
    stg_data_list = []
