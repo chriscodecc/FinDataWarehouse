@@ -17,11 +17,7 @@ FROM python:3.12-slim
 WORKDIR /app
 # --- NEU: User 'vscode' anlegen ---
 RUN groupadd --gid 1000 vscode \
-    && useradd --uid 1000 --gid 1000 -m vscode \
-    && apt-get update \
-    && apt-get install -y sudo \
-    && echo vscode ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/vscode \
-    && chmod 0440 /etc/sudoers.d/vscode
+    && useradd --uid 1000 --gid 1000 -m vscode 
     
 # ----------------------------------
 # libpq5 runtime für postgres
